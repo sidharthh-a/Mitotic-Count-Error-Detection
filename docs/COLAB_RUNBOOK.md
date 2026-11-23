@@ -48,10 +48,15 @@ The notebook refuses to train without CUDA, and refuses to touch the frozen arte
 
 Cell numbers below are the notebook's own positions (1-based, markdown headers included).
 
+**Runtime > Run all works end to end.** The notebook selects CUDA when present and falls
+back to CPU with a printed cost warning, reuses an existing baseline checkpoint instead of
+retraining it, and reuses a finished baseline gate. Expect ~1.5 h on a T4 and ~7–8 h on CPU,
+where the same steps are only slower, not different.
+
 | Cell | What it does | Expected output | Gate |
 |---|---|---|---|
 | 2 | GPU identity | `Tesla T4, 15360 MiB` | GPU present |
-| 3 | install deps, assert CUDA | `cuda available: True` | **stop if False** |
+| 3 | install deps, pick `DEVICE` | `DEVICE = cuda` (or `cpu` + cost warning) | warns on CPU, does not stop |
 | 5 | mount Drive, set `MIDOG_DATA_ROOT` | cwd + free space | `midogcx_project` found |
 | 6 | `pytest tests/ -q` | `115 passed` | **stop if any fail** |
 | 8 | `build_cohort.py --check` | `cohort verified unchanged (…)` | **stop if it errors** |
