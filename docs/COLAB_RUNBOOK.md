@@ -51,7 +51,7 @@ The notebook refuses to train without CUDA, and refuses to touch the frozen arte
 | 1 | GPU identity | `Tesla T4, 15360 MiB` | GPU present |
 | 2 | install deps, assert CUDA | `cuda available: True` | **stop if False** |
 | 4 | mount Drive, set `MIDOG_DATA_ROOT` | cwd + free space | `midogcx_project` found |
-| 5 | `pytest tests/ -q` | `108 passed` | **stop if any fail** |
+| 5 | `pytest tests/ -q` | `115 passed` | **stop if any fail** |
 | 7 | `build_cohort.py --check` | `cohort verified unchanged (…)` | **stop if it errors** |
 | 8 | `download_specimens.py --dry-run` | per-file sizes, "can hold" | advisement only |
 | 9 | `download_specimens.py` | `already present` × 55, or downloads | skip if images are on Drive |

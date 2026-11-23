@@ -103,7 +103,7 @@ the slow end.
 |---|---|---|
 | 1 | ~~Download the 55-specimen cohort~~ | **done** — 55/55 at `C:/midogpp_data` |
 | 2 | ~~`prepare_regions.py` on real data~~ | **done** — 2,395 regions, grid verified |
-| 3 | Source detector training to a usable checkpoint | **GPU (Colab)** |
+| 3 | ~~Source detector training to a usable checkpoint~~ | **done** — 500 updates on Colab, checkpoint verified (see Model training status) |
 | 4 | Threshold calibration + `source_only` control evaluated | Task 3 |
 | 5 | Error-predictor fit on real regions (OOF report) | Tasks 3–4 |
 | 6 | Five-strategy adaptation comparison | Tasks 3–5 |
@@ -141,8 +141,26 @@ is the next action. Nothing else is waiting on the local machine.
 
 ## Model training status
 
-No detector has been trained on real MIDOG++ data. Everything reported about training so
-far is (a) synthetic smoke-test execution or (b) a CPU throughput measurement.
+One real run exists: the source-domain baseline, trained on Colab on 23 November 2026 and
+handed back as `outputs/runs/source_baseline/checkpoint.pth` (145.7 MB).
+
+| | |
+|---|---|
+| Updates | 500 in 382.4 s (0.76 s/update) |
+| Role / regions | `source_train`, 745 regions, 20 specimens |
+| Architecture | `retinanet_resnet50_fpn_v2`, 362 state tensors, 36.4 M params, 170 trainable |
+| Config fingerprint | `778e4f9a6970900c…` — reproduces exactly from the shipped `base.yaml` |
+| Effective settings | defaults, i.e. `batch_size=2`, 500 updates; **not** the runbook's `batch_size=4` |
+| Provenance | normalisation identical to frozen `outputs/metadata/normalization.json`; detector config identical to `base.yaml`; strict `load_state_dict` passes with the head shape checked |
+| Integrity | no NaN/Inf in any tensor; BatchNorm buffers are trained values, not initial ones |
+
+Learning probe (not a metric): total detection loss on 3 held-out `source_assess` regions
+(2 mitotic, 1 empty) is **0.456** for the trained weights versus **1.728** for a
+random-initialised model of the same architecture — the weights carry real signal. No
+precision/recall/MAE has been measured yet, so **no performance claim is made**.
+
+Everything reported about training before this run is either synthetic smoke-test execution
+or a CPU throughput measurement.
 
 ## Experiment status
 
