@@ -393,7 +393,14 @@ def check_notebook() -> None:
     nb = json.loads(path.read_text(encoding="utf-8"))
     code_cells = ["".join(c["source"]) for c in nb["cells"] if c["cell_type"] == "code"]
 
-    stray = [i for i, src in enumerate(code_cells) if "\\" in src]
+    # Only a backslash escaping a newline inside a `!` shell command is broken in IPython.
+    # A backslash inside a Python string (``print("\\n".join(...))``) is legitimate and must
+    # not fail this check, so test line endings rather than the presence of any backslash.
+    stray = [
+        i
+        for i, src in enumerate(code_cells, 1)
+        if any(line.lstrip().startswith("!") and line.rstrip().endswith("\\") for line in src.splitlines())
+    ]
     record("notebook: valid JSON", nb.get("nbformat") == 4, f"{len(nb['cells'])} cells, nbformat 4")
 
     frozen_calls = []
@@ -414,7 +421,28 @@ def check_notebook() -> None:
             else f"unguarded: {[c[2] for c in unguarded]}"
         ),
     )
-    record("notebook: no broken shell escapes", not stray, "all code cells free of backslashes" if not stray else f"cells {stray}")
+    record(
+        "notebook: no broken shell escapes",
+        not stray,
+        "no `!` command continues with a backslash" if not stray else f"cells with shell continuations: {stray}",
+    )
+    # Python cells must at least parse: a real newline inside a string literal made one
+    # cell unrunnable while every other check passed. `!` and `%` lines are IPython, not
+    # Python, so they are blanked before compiling.
+    unparsable = []
+    for i, src in enumerate(code_cells, 1):
+        python_src = "\n".join(
+            "pass" if line.lstrip().startswith(("!", "%")) else line for line in src.splitlines()
+        )
+        try:
+            compile(python_src, f"notebook cell {i}", "exec")
+        except SyntaxError as exc:
+            unparsable.append(f"cell {i}: line {exc.lineno}: {exc.msg}")
+    record(
+        "notebook: code cells parse",
+        not unparsable,
+        "all Python statements compile" if not unparsable else "; ".join(unparsable),
+    )
 
 
 # --------------------------------------------------------------------------------------

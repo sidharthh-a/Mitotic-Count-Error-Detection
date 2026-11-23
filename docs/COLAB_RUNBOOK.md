@@ -46,21 +46,23 @@ Confirm you have ≥ 10 GB free before starting.
 
 The notebook refuses to train without CUDA, and refuses to touch the frozen artefacts.
 
+Cell numbers below are the notebook's own positions (1-based, markdown headers included).
+
 | Cell | What it does | Expected output | Gate |
 |---|---|---|---|
-| 1 | GPU identity | `Tesla T4, 15360 MiB` | GPU present |
-| 2 | install deps, assert CUDA | `cuda available: True` | **stop if False** |
-| 4 | mount Drive, set `MIDOG_DATA_ROOT` | cwd + free space | `midogcx_project` found |
-| 5 | `pytest tests/ -q` | `115 passed` | **stop if any fail** |
-| 7 | `build_cohort.py --check` | `cohort verified unchanged (…)` | **stop if it errors** |
-| 8 | `download_specimens.py --dry-run` | per-file sizes, "can hold" | advisement only |
-| 9 | `download_specimens.py` | `already present` × 55, or downloads | skip if images are on Drive |
-| 11 | `prepare_regions.py --check` | `2,395 regions, 55 specimens … nothing written` | **stop if it errors** |
-| 13 | train the source baseline | loss trace every 20 updates | see §3 |
-| 14 | select the newest checkpoint | prints `using: outputs/runs/…/checkpoint.pth` | checkpoint exists |
+| 2 | GPU identity | `Tesla T4, 15360 MiB` | GPU present |
+| 3 | install deps, assert CUDA | `cuda available: True` | **stop if False** |
+| 5 | mount Drive, set `MIDOG_DATA_ROOT` | cwd + free space | `midogcx_project` found |
+| 6 | `pytest tests/ -q` | `115 passed` | **stop if any fail** |
+| 8 | `build_cohort.py --check` | `cohort verified unchanged (…)` | **stop if it errors** |
+| 9 | `download_specimens.py --dry-run` | per-file sizes, "can hold" | advisement only |
+| 10 | `download_specimens.py` | `already present` × 55, or downloads | skip if images are on Drive |
+| 12 | `prepare_regions.py --check` | `2,395 regions, 55 specimens … nothing written` | **stop if it errors** |
+| 14 | train the source baseline | loss trace every 20 updates | see §3 |
+| 15 | select the newest checkpoint | prints `using: outputs/runs/…/checkpoint.pth` | checkpoint exists |
 
-Cells 16–18 (acquisition experiment) are **not** part of this run. Do not run them until the
-baseline gate in cell 16 is reviewed.
+Cells 17–19 (acquisition experiment) are **not** part of this run. Do not run them until the
+baseline gate in cell 17 is reviewed.
 
 If `--check` fails, **do not** re-run `prepare_regions.py` without `--check` on Colab. The
 frozen grid on Drive would then differ from the one every budget and selection was computed
@@ -70,7 +72,7 @@ against. Stop and report the mismatch instead.
 
 ## 3. The training command itself
 
-Cell 13 runs exactly this:
+Cell 14 runs exactly this:
 
 ```bash
 python scripts/train_detector.py --tag source_baseline \
@@ -139,7 +141,7 @@ Checkpoints are ~150 MB each; results JSON/CSV are kilobytes.
 | `CUDA not available` assertion | CPU runtime selected | Runtime → Change runtime type → T4 GPU |
 | `pid ... CUDA out of memory` | batch too large | `training.batch_size=2` |
 | Training crawls (many s/update) | reading TIFFs over Drive | `cp -r` the needed files to `/content/`, point `MIDOG_DATA_ROOT` there |
-| Runtime disconnected mid-training | Colab session limit | everything is on Drive; re-run from cell 4 and resume with the last checkpoint |
+| Runtime disconnected mid-training | Colab session limit | everything is on Drive. **Training cannot be resumed** — no optimizer state is saved — so re-run cell 13 from scratch, with `training.checkpoint_every=100` as survival points, not as resume points |
 | `cohort failed its integrity check` | cohort file edited or corrupted | stop; restore the frozen file, do not rebuild |
 | `frozen artefact mismatch` | region grid not reproducible | stop; report which column differed |
 | pytest failures on Colab | environment differs from local | stop before training; fix the environment, not the tests |
@@ -162,7 +164,7 @@ Checkpoints are ~150 MB each; results JSON/CSV are kilobytes.
 ## 7. After the baseline trains
 
 1. Persist the checkpoint and `train_summary.json` to Drive.
-2. Run the baseline gate (notebook cell 16):
+2. Run the baseline gate (notebook cell 17):
 
    ```bash
    python scripts/run_acquisition_experiment.py --checkpoint {SOURCE_CKPT} \
@@ -172,10 +174,10 @@ Checkpoints are ~150 MB each; results JSON/CSV are kilobytes.
    This evaluates the **unadapted** detector on the 10 melanoma assessment specimens and
    stops. If precision/recall/F1 are near zero there, the acquisition comparison cannot be
    interpreted — fix the baseline first.
-3. Only if the gate is sane, run the full experiment (cell 17) and update
+3. Only if the gate is sane, run the full experiment (cell 18) and update
    `PROJECT_STATUS.md` with the measured values.
 
-### Re-running Cell 16 after the predictor fix
+### Re-running the gate (cell 17) after the predictor fix
 
 The first Cell 16 attempt failed with
 `HistGradientBoostingRegressor.__init__() got an unexpected keyword argument 'n_splits'`.
@@ -184,15 +186,15 @@ That is fixed in `midogcx/models/error_predictor.py`, `midogcx/acquisition.py` a
 
 1. Copy the fixed `midogcx/`, `scripts/` and `configs/` from the project archive over the
    copy on Drive (no data or checkpoint needs to move).
-2. In Colab, re-run cell 5 (`pytest -q`, expect **115 passed**). If this fails, stop: the
+2. In Colab, re-run cell 6 (`pytest -q`, expect **115 passed**). If this fails, stop: the
    Drive copy is not the fixed code.
-3. Re-run cell 14 to set `SOURCE_CKPT`, then cell 16. The exact command is:
+3. Re-run cell 15 to set `SOURCE_CKPT`, then cell 17. The exact command is:
 
 ```python
 !python scripts/run_acquisition_experiment.py --checkpoint {SOURCE_CKPT} --tag baseline_gate --device cuda --stop-after-control
 ```
 
-Run it from the project directory (cell 4 already `chdir`s there). Keep it on one line — a
+Run it from the project directory (cell 5 already `chdir`s there). Keep it on one line — a
 `!` command with a backslash continuation does not work in IPython. Expect a
 `predictor_report.json` with `n_splits`, `regressor_params` and out-of-fold scores, then the
 `source_only` metrics table.
