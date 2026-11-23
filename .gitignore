@@ -1,0 +1,28 @@
+# Specimen images are ~150 MiB each and never belong in git.
+data/images/
+*.tiff
+*.tif
+*.svs
+
+# Large generated artefacts
+outputs/runs/
+outputs/experiments/
+outputs/logs/
+*.pth
+*.pkl
+*.part
+
+# Local tooling state (Freebuff project marker), not part of the codebase
+.freebuff/
+
+# Caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.streamlit/
+.DS_Store
+Thumbs.db
+
+# Keep metadata, splits and code
+!data/metadata/*.json
+!data/metadata/*.csv

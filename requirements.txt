@@ -1,0 +1,20 @@
+# Core runtime. Versions are the ones actually verified on this machine
+# (Windows 11, Python 3.13.15, CPU-only torch 2.7.0+cpu, torchvision 0.22.0+cpu).
+# On Colab, install torch/torchvision from the CUDA wheels instead of pinning these.
+
+torch>=2.4
+torchvision>=0.19
+numpy>=1.26
+pandas>=2.0
+scipy>=1.11
+scikit-learn>=1.4
+Pillow>=10.0
+opencv-python-headless>=4.8   # tissue masking only; headless avoids GUI deps
+matplotlib>=3.8
+PyYAML>=6.0
+requests>=2.31
+tqdm>=4.66
+streamlit>=1.32
+
+# Development / verification
+pytest>=8.0

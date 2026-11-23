@@ -1,0 +1,89 @@
+# Base configuration for the MIDOG++ count-error-guided region selection study.
+# Every value here is a deliberate, documented choice. Override per run with
+# `--set key=subkey=value`, or layer a file with `--config x.yaml --extra y.yaml`.
+
+project:
+  name: midogcx
+  seed: 20261026
+  # null = use $MIDOG_DATA_ROOT, else data/images. On this machine the project drive is
+  # too small for the cohort, so images normally live on another disk.
+  data_root: null
+  outputs: outputs
+
+paths:
+  manifest: data/metadata/datasets_xvalidation.csv
+  annotations: data/metadata/MIDOG++.json
+  cohort: data/splits/cohort_v1.json
+  regions: data/splits/regions.csv
+  normalization: outputs/metadata/normalization.json
+
+dataset:
+  # Region grid: 512x512 non-overlapping, so annotated tissue area is additive.
+  patch_size: 512
+  min_tissue_fraction: 0.5
+  mask_downsample: 8
+
+model:
+  arch: retinanet_resnet50_fpn_v2
+  num_classes: 2 # background + mitotic figure (torchvision counts background)
+  foreground_label: 1
+  pretrained: coco # COCO initialisation, NOT a MIDOG++ pretrained detector
+  trainable_backbone_layers: 3
+  min_size: 512
+  max_size: 512
+  score_thresh: 0.01 # low floor; thresholds are applied offline
+
+inference:
+  tile_size: 512
+  stride: 460 # 10% overlap
+  batch_size: 4
+  score_floor: 0.01
+  nms_radius_px: 25 # official whole-specimen centre-distance suppression
+
+evaluation:
+  match_radius_um: 7.5
+  threshold_search:
+    start: 0.5
+    stop: 0.99
+    step: 0.01
+  bootstrap_samples: 1000
+
+training:
+  # Source baseline budget. These are defaults, not a schedule: measure throughput first
+  # and override per run with `--set training.updates=... training.batch_size=...`.
+  # See docs/COLAB_RUNBOOK.md for the exact training invocation.
+  updates: 500
+  batch_size: 2
+  lr_head: 5.0e-4
+  lr_backbone: 5.0e-5
+  weight_decay: 1.0e-4
+  warmup_updates: 50
+  samples_per_epoch: 64
+  fraction_positive: 0.5
+  grad_clip: 10.0
+  log_every: 20
+  num_workers: 0
+  replay_probability: 0.0
+  device: cuda
+
+acquisition:
+  # Feasibility budget from the research protocol: 20% of melanoma-pool tissue area.
+  budget_fraction: 0.2
+  uncertainty_delta: 0.1
+  strategies: [random, uncertainty, density, learned_loss, count_error]
+  # Fine-tuning budget per branch. Identical for every strategy by construction.
+  adaptation_updates: 500
+  # Cohort roles whose labels may train the acquisition predictors. These specimens were
+  # NOT used to fit the source detector, so predictor features are out-of-sample. The
+  # melanoma pool and assessment specimens are never included here.
+  error_training_roles: [source_calib, source_assess]
+  error_predictor:
+    # Estimator hyperparameters for the shared HistGradientBoostingRegressor.
+    max_depth: 3
+    max_iter: 200
+    learning_rate: 0.05
+    min_samples_leaf: 20
+    l2_regularization: 1.0
+    # CV setting, not an estimator keyword: number of GroupKFold folds over specimens
+    # (capped at the specimen count). It is stripped before the estimator is built.
+    n_splits: 5

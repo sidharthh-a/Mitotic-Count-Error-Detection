@@ -1,0 +1,504 @@
+Slide,Dataset,Tumor,Scanner,Origin,Species,file_name,size_bytes,download_url
+1,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,001.tiff,156190526,https://ndownloader.figshare.com/files/40282099
+2,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,002.tiff,156190526,https://ndownloader.figshare.com/files/40282102
+3,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,003.tiff,156190526,https://ndownloader.figshare.com/files/40282111
+4,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,004.tiff,156190526,https://ndownloader.figshare.com/files/40282138
+5,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,005.tiff,156190526,https://ndownloader.figshare.com/files/40282120
+6,test,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,006.tiff,156190526,https://ndownloader.figshare.com/files/40282126
+7,test,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,007.tiff,156190526,https://ndownloader.figshare.com/files/40282135
+8,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,008.tiff,156190526,https://ndownloader.figshare.com/files/40282105
+9,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,009.tiff,156190526,https://ndownloader.figshare.com/files/40282141
+10,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,010.tiff,156190526,https://ndownloader.figshare.com/files/40282108
+11,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,011.tiff,156190526,https://ndownloader.figshare.com/files/40282129
+12,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,012.tiff,156190526,https://ndownloader.figshare.com/files/40282132
+13,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,013.tiff,156190526,https://ndownloader.figshare.com/files/40282117
+14,test,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,014.tiff,156190526,https://ndownloader.figshare.com/files/40282114
+15,test,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,015.tiff,156190526,https://ndownloader.figshare.com/files/40282123
+16,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,016.tiff,156190526,https://ndownloader.figshare.com/files/40282096
+17,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,017.tiff,156190526,https://ndownloader.figshare.com/files/40282153
+18,test,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,018.tiff,156190526,https://ndownloader.figshare.com/files/40282144
+19,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,019.tiff,156190526,https://ndownloader.figshare.com/files/40282180
+20,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,020.tiff,156190526,https://ndownloader.figshare.com/files/40282150
+21,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,021.tiff,156190526,https://ndownloader.figshare.com/files/40282162
+22,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,022.tiff,156190526,https://ndownloader.figshare.com/files/40282147
+23,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,023.tiff,156190526,https://ndownloader.figshare.com/files/40282159
+24,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,024.tiff,156190526,https://ndownloader.figshare.com/files/40282171
+25,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,025.tiff,156190526,https://ndownloader.figshare.com/files/40282177
+26,test,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,026.tiff,156190526,https://ndownloader.figshare.com/files/40282156
+27,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,027.tiff,156190526,https://ndownloader.figshare.com/files/40282174
+28,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,028.tiff,156190526,https://ndownloader.figshare.com/files/40282165
+29,test,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,029.tiff,156190526,https://ndownloader.figshare.com/files/40282189
+30,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,030.tiff,156190526,https://ndownloader.figshare.com/files/40282183
+31,test,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,031.tiff,156190526,https://ndownloader.figshare.com/files/40282168
+32,test,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,032.tiff,156190526,https://ndownloader.figshare.com/files/40282198
+33,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,033.tiff,156190526,https://ndownloader.figshare.com/files/40282207
+34,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,034.tiff,156190526,https://ndownloader.figshare.com/files/40282186
+35,test,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,035.tiff,156190526,https://ndownloader.figshare.com/files/40282201
+36,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,036.tiff,156190526,https://ndownloader.figshare.com/files/40282195
+37,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,037.tiff,156190526,https://ndownloader.figshare.com/files/40282204
+38,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,038.tiff,156190526,https://ndownloader.figshare.com/files/40282192
+39,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,039.tiff,156190526,https://ndownloader.figshare.com/files/40282210
+40,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,040.tiff,156190526,https://ndownloader.figshare.com/files/40282225
+41,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,041.tiff,156190526,https://ndownloader.figshare.com/files/40282231
+42,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,042.tiff,156190526,https://ndownloader.figshare.com/files/40282213
+43,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,043.tiff,156190526,https://ndownloader.figshare.com/files/40282234
+44,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,044.tiff,156190526,https://ndownloader.figshare.com/files/40282216
+45,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,045.tiff,156190526,https://ndownloader.figshare.com/files/40282243
+46,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,046.tiff,156190526,https://ndownloader.figshare.com/files/40282222
+47,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,047.tiff,156190526,https://ndownloader.figshare.com/files/40282228
+48,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,048.tiff,156190526,https://ndownloader.figshare.com/files/40282219
+49,train,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,049.tiff,156190526,https://ndownloader.figshare.com/files/40282246
+50,test,human breast cancer,Hamammatsu XR,UMC Utrecht,Human,050.tiff,156190526,https://ndownloader.figshare.com/files/40282240
+51,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,051.tiff,152379326,https://ndownloader.figshare.com/files/40282270
+52,test,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,052.tiff,152253902,https://ndownloader.figshare.com/files/40282237
+53,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,053.tiff,151114494,https://ndownloader.figshare.com/files/40282252
+54,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,054.tiff,153438206,https://ndownloader.figshare.com/files/40282261
+55,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,055.tiff,153388526,https://ndownloader.figshare.com/files/40282249
+56,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,056.tiff,151827086,https://ndownloader.figshare.com/files/40282255
+57,test,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,057.tiff,152118406,https://ndownloader.figshare.com/files/40282276
+58,test,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,058.tiff,152388730,https://ndownloader.figshare.com/files/40282264
+59,test,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,059.tiff,150951482,https://ndownloader.figshare.com/files/40282279
+60,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,060.tiff,150844166,https://ndownloader.figshare.com/files/40282258
+61,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,061.tiff,153242678,https://ndownloader.figshare.com/files/40282285
+62,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,062.tiff,152509934,https://ndownloader.figshare.com/files/40282267
+63,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,063.tiff,151428686,https://ndownloader.figshare.com/files/40282291
+64,test,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,064.tiff,150609770,https://ndownloader.figshare.com/files/40282273
+65,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,065.tiff,152814546,https://ndownloader.figshare.com/files/40282294
+66,test,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,066.tiff,152268574,https://ndownloader.figshare.com/files/40282282
+67,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,067.tiff,152332474,https://ndownloader.figshare.com/files/40282297
+68,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,068.tiff,153709646,https://ndownloader.figshare.com/files/40282288
+69,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,069.tiff,151020082,https://ndownloader.figshare.com/files/40282309
+70,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,070.tiff,151848410,https://ndownloader.figshare.com/files/40282300
+71,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,071.tiff,151514334,https://ndownloader.figshare.com/files/40282324
+72,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,072.tiff,151150814,https://ndownloader.figshare.com/files/40282318
+73,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,073.tiff,151263654,https://ndownloader.figshare.com/files/40282321
+74,test,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,074.tiff,153170498,https://ndownloader.figshare.com/files/40282306
+75,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,075.tiff,153787946,https://ndownloader.figshare.com/files/40282330
+76,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,076.tiff,150895126,https://ndownloader.figshare.com/files/40282303
+77,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,077.tiff,151834306,https://ndownloader.figshare.com/files/40282333
+78,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,078.tiff,150766734,https://ndownloader.figshare.com/files/40282312
+79,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,079.tiff,152722358,https://ndownloader.figshare.com/files/40282351
+80,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,080.tiff,152978966,https://ndownloader.figshare.com/files/40282315
+81,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,081.tiff,151485326,https://ndownloader.figshare.com/files/40282339
+82,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,082.tiff,151206638,https://ndownloader.figshare.com/files/40282327
+83,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,083.tiff,153208150,https://ndownloader.figshare.com/files/40282342
+84,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,084.tiff,152117006,https://ndownloader.figshare.com/files/40282357
+85,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,085.tiff,150787190,https://ndownloader.figshare.com/files/40282354
+86,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,086.tiff,152482366,https://ndownloader.figshare.com/files/40282336
+87,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,087.tiff,151699094,https://ndownloader.figshare.com/files/40282372
+88,test,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,088.tiff,151876706,https://ndownloader.figshare.com/files/40282366
+89,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,089.tiff,151260374,https://ndownloader.figshare.com/files/40282378
+90,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,090.tiff,153545206,https://ndownloader.figshare.com/files/40282363
+91,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,091.tiff,152916446,https://ndownloader.figshare.com/files/40282375
+92,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,092.tiff,152090274,https://ndownloader.figshare.com/files/40282348
+93,test,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,093.tiff,150560142,https://ndownloader.figshare.com/files/40282381
+94,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,094.tiff,152402174,https://ndownloader.figshare.com/files/40282360
+95,test,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,095.tiff,150721022,https://ndownloader.figshare.com/files/40282387
+96,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,096.tiff,152475058,https://ndownloader.figshare.com/files/40282345
+97,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,097.tiff,152040542,https://ndownloader.figshare.com/files/40282393
+98,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,098.tiff,152579574,https://ndownloader.figshare.com/files/40282369
+99,train,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,099.tiff,151869878,https://ndownloader.figshare.com/files/40282405
+100,test,human breast cancer,Hamamatsu S360,UMC Utrecht,Human,100.tiff,150492702,https://ndownloader.figshare.com/files/40282384
+101,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,101.tiff,125356206,https://ndownloader.figshare.com/files/40282414
+102,test,human breast cancer,Aperio CS2,UMC Utrecht,Human,102.tiff,124826426,https://ndownloader.figshare.com/files/40282390
+103,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,103.tiff,125278930,https://ndownloader.figshare.com/files/40282411
+104,test,human breast cancer,Aperio CS2,UMC Utrecht,Human,104.tiff,125738222,https://ndownloader.figshare.com/files/40282396
+105,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,105.tiff,125841006,https://ndownloader.figshare.com/files/40282423
+106,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,106.tiff,125479022,https://ndownloader.figshare.com/files/40282417
+107,test,human breast cancer,Aperio CS2,UMC Utrecht,Human,107.tiff,126736590,https://ndownloader.figshare.com/files/40282432
+108,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,108.tiff,126180890,https://ndownloader.figshare.com/files/40282402
+109,test,human breast cancer,Aperio CS2,UMC Utrecht,Human,109.tiff,125722990,https://ndownloader.figshare.com/files/40282435
+110,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,110.tiff,124334386,https://ndownloader.figshare.com/files/40282420
+111,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,111.tiff,124851906,https://ndownloader.figshare.com/files/40282444
+112,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,112.tiff,125903478,https://ndownloader.figshare.com/files/40282429
+113,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,113.tiff,126167070,https://ndownloader.figshare.com/files/40282450
+114,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,114.tiff,126256206,https://ndownloader.figshare.com/files/40282441
+115,test,human breast cancer,Aperio CS2,UMC Utrecht,Human,115.tiff,126350306,https://ndownloader.figshare.com/files/40282456
+116,test,human breast cancer,Aperio CS2,UMC Utrecht,Human,116.tiff,125845646,https://ndownloader.figshare.com/files/40282408
+117,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,117.tiff,124330626,https://ndownloader.figshare.com/files/40282462
+118,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,118.tiff,124645818,https://ndownloader.figshare.com/files/40282438
+119,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,119.tiff,125395302,https://ndownloader.figshare.com/files/40282468
+120,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,120.tiff,125563370,https://ndownloader.figshare.com/files/40282459
+121,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,121.tiff,125046330,https://ndownloader.figshare.com/files/40282486
+122,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,122.tiff,125854118,https://ndownloader.figshare.com/files/40282453
+123,test,human breast cancer,Aperio CS2,UMC Utrecht,Human,123.tiff,125064718,https://ndownloader.figshare.com/files/40282477
+124,test,human breast cancer,Aperio CS2,UMC Utrecht,Human,124.tiff,124338446,https://ndownloader.figshare.com/files/40282447
+125,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,125.tiff,126454706,https://ndownloader.figshare.com/files/40282474
+126,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,126.tiff,124762270,https://ndownloader.figshare.com/files/40282471
+127,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,127.tiff,126483094,https://ndownloader.figshare.com/files/40282426
+128,test,human breast cancer,Aperio CS2,UMC Utrecht,Human,128.tiff,125014030,https://ndownloader.figshare.com/files/40282465
+129,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,129.tiff,125046330,https://ndownloader.figshare.com/files/40282483
+130,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,130.tiff,125751126,https://ndownloader.figshare.com/files/40282516
+131,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,131.tiff,126561202,https://ndownloader.figshare.com/files/40282480
+132,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,132.tiff,125994862,https://ndownloader.figshare.com/files/40282507
+133,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,133.tiff,126775822,https://ndownloader.figshare.com/files/40282492
+134,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,134.tiff,124548558,https://ndownloader.figshare.com/files/40282498
+135,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,135.tiff,126488798,https://ndownloader.figshare.com/files/40282489
+136,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,136.tiff,125329982,https://ndownloader.figshare.com/files/40282504
+137,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,137.tiff,124820430,https://ndownloader.figshare.com/files/40282495
+138,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,138.tiff,125994126,https://ndownloader.figshare.com/files/40282510
+139,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,139.tiff,124580494,https://ndownloader.figshare.com/files/40282501
+140,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,140.tiff,126580646,https://ndownloader.figshare.com/files/40282513
+141,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,141.tiff,124691270,https://ndownloader.figshare.com/files/40282534
+142,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,142.tiff,124118894,https://ndownloader.figshare.com/files/40282522
+143,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,143.tiff,126559774,https://ndownloader.figshare.com/files/40282519
+144,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,144.tiff,126058182,https://ndownloader.figshare.com/files/40282540
+145,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,145.tiff,124469710,https://ndownloader.figshare.com/files/40282528
+146,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,146.tiff,125789646,https://ndownloader.figshare.com/files/40282525
+147,test,human breast cancer,Aperio CS2,UMC Utrecht,Human,147.tiff,126594062,https://ndownloader.figshare.com/files/40282555
+148,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,148.tiff,125549806,https://ndownloader.figshare.com/files/40282531
+149,train,human breast cancer,Aperio CS2,UMC Utrecht,Human,149.tiff,124794006,https://ndownloader.figshare.com/files/40282564
+150,test,human breast cancer,Aperio CS2,UMC Utrecht,Human,150.tiff,125770422,https://ndownloader.figshare.com/files/40282537
+201,train,canine lung cancer,3D Histech,VMU Vienna,Canine,201.tiff,129777570,https://ndownloader.figshare.com/files/40282558
+202,train,canine lung cancer,3D Histech,VMU Vienna,Canine,202.tiff,129777570,https://ndownloader.figshare.com/files/40282543
+203,test,canine lung cancer,3D Histech,VMU Vienna,Canine,203.tiff,129777570,https://ndownloader.figshare.com/files/40282549
+204,train,canine lung cancer,3D Histech,VMU Vienna,Canine,204.tiff,129777570,https://ndownloader.figshare.com/files/40282546
+205,train,canine lung cancer,3D Histech,VMU Vienna,Canine,205.tiff,129777570,https://ndownloader.figshare.com/files/40282552
+206,train,canine lung cancer,3D Histech,VMU Vienna,Canine,206.tiff,129777570,https://ndownloader.figshare.com/files/40282570
+207,train,canine lung cancer,3D Histech,VMU Vienna,Canine,207.tiff,129777570,https://ndownloader.figshare.com/files/40282561
+208,train,canine lung cancer,3D Histech,VMU Vienna,Canine,208.tiff,129777570,https://ndownloader.figshare.com/files/40282567
+209,train,canine lung cancer,3D Histech,VMU Vienna,Canine,209.tiff,129777570,https://ndownloader.figshare.com/files/40282573
+210,train,canine lung cancer,3D Histech,VMU Vienna,Canine,210.tiff,129777570,https://ndownloader.figshare.com/files/40282594
+211,train,canine lung cancer,3D Histech,VMU Vienna,Canine,211.tiff,129777570,https://ndownloader.figshare.com/files/40282612
+212,test,canine lung cancer,3D Histech,VMU Vienna,Canine,212.tiff,129777570,https://ndownloader.figshare.com/files/40282621
+213,train,canine lung cancer,3D Histech,VMU Vienna,Canine,213.tiff,129777570,https://ndownloader.figshare.com/files/40282576
+214,train,canine lung cancer,3D Histech,VMU Vienna,Canine,214.tiff,129777570,https://ndownloader.figshare.com/files/40282618
+215,train,canine lung cancer,3D Histech,VMU Vienna,Canine,215.tiff,129777570,https://ndownloader.figshare.com/files/40282600
+216,train,canine lung cancer,3D Histech,VMU Vienna,Canine,216.tiff,129777570,https://ndownloader.figshare.com/files/40282615
+217,train,canine lung cancer,3D Histech,VMU Vienna,Canine,217.tiff,129777570,https://ndownloader.figshare.com/files/40282603
+218,test,canine lung cancer,3D Histech,VMU Vienna,Canine,218.tiff,129777570,https://ndownloader.figshare.com/files/40282627
+219,train,canine lung cancer,3D Histech,VMU Vienna,Canine,219.tiff,129777570,https://ndownloader.figshare.com/files/40282636
+220,test,canine lung cancer,3D Histech,VMU Vienna,Canine,220.tiff,129777570,https://ndownloader.figshare.com/files/40282609
+221,train,canine lung cancer,3D Histech,VMU Vienna,Canine,221.tiff,129777570,https://ndownloader.figshare.com/files/40282639
+222,train,canine lung cancer,3D Histech,VMU Vienna,Canine,222.tiff,129777570,https://ndownloader.figshare.com/files/40282606
+223,train,canine lung cancer,3D Histech,VMU Vienna,Canine,223.tiff,129777570,https://ndownloader.figshare.com/files/40282630
+224,train,canine lung cancer,3D Histech,VMU Vienna,Canine,224.tiff,129777570,https://ndownloader.figshare.com/files/40282624
+225,train,canine lung cancer,3D Histech,VMU Vienna,Canine,225.tiff,129777570,https://ndownloader.figshare.com/files/40282657
+226,train,canine lung cancer,3D Histech,VMU Vienna,Canine,226.tiff,129777570,https://ndownloader.figshare.com/files/40282666
+227,train,canine lung cancer,3D Histech,VMU Vienna,Canine,227.tiff,129777570,https://ndownloader.figshare.com/files/40282642
+228,train,canine lung cancer,3D Histech,VMU Vienna,Canine,228.tiff,129777570,https://ndownloader.figshare.com/files/40282672
+229,train,canine lung cancer,3D Histech,VMU Vienna,Canine,229.tiff,129777570,https://ndownloader.figshare.com/files/40282633
+230,test,canine lung cancer,3D Histech,VMU Vienna,Canine,230.tiff,129777570,https://ndownloader.figshare.com/files/40282669
+231,train,canine lung cancer,3D Histech,VMU Vienna,Canine,231.tiff,129777570,https://ndownloader.figshare.com/files/40282648
+232,test,canine lung cancer,3D Histech,VMU Vienna,Canine,232.tiff,129777570,https://ndownloader.figshare.com/files/40282675
+233,train,canine lung cancer,3D Histech,VMU Vienna,Canine,233.tiff,129777570,https://ndownloader.figshare.com/files/40282651
+234,test,canine lung cancer,3D Histech,VMU Vienna,Canine,234.tiff,129777570,https://ndownloader.figshare.com/files/40282681
+235,train,canine lung cancer,3D Histech,VMU Vienna,Canine,235.tiff,129777570,https://ndownloader.figshare.com/files/40282645
+236,test,canine lung cancer,3D Histech,VMU Vienna,Canine,236.tiff,129777570,https://ndownloader.figshare.com/files/40282684
+237,train,canine lung cancer,3D Histech,VMU Vienna,Canine,237.tiff,129777570,https://ndownloader.figshare.com/files/40282654
+238,train,canine lung cancer,3D Histech,VMU Vienna,Canine,238.tiff,129777570,https://ndownloader.figshare.com/files/40282687
+239,test,canine lung cancer,3D Histech,VMU Vienna,Canine,239.tiff,129777570,https://ndownloader.figshare.com/files/40282660
+240,train,canine lung cancer,3D Histech,VMU Vienna,Canine,240.tiff,129777570,https://ndownloader.figshare.com/files/40282708
+241,test,canine lung cancer,3D Histech,VMU Vienna,Canine,241.tiff,129777570,https://ndownloader.figshare.com/files/40282663
+242,train,canine lung cancer,3D Histech,VMU Vienna,Canine,242.tiff,129777570,https://ndownloader.figshare.com/files/40282714
+243,train,canine lung cancer,3D Histech,VMU Vienna,Canine,243.tiff,129777570,https://ndownloader.figshare.com/files/40282678
+244,train,canine lung cancer,3D Histech,VMU Vienna,Canine,244.tiff,129777570,https://ndownloader.figshare.com/files/40282717
+245,train,canine lymphoma,3D Histech,VMU Vienna,Canine,245.tiff,129777570,https://ndownloader.figshare.com/files/40282720
+246,train,canine lymphoma,3D Histech,VMU Vienna,Canine,246.tiff,129777570,https://ndownloader.figshare.com/files/40282723
+247,train,canine lymphoma,3D Histech,VMU Vienna,Canine,247.tiff,129777570,https://ndownloader.figshare.com/files/40282693
+248,train,canine lymphoma,3D Histech,VMU Vienna,Canine,248.tiff,129777570,https://ndownloader.figshare.com/files/40282753
+249,test,canine lymphoma,3D Histech,VMU Vienna,Canine,249.tiff,129777570,https://ndownloader.figshare.com/files/40282690
+250,train,canine lymphoma,3D Histech,VMU Vienna,Canine,250.tiff,129777570,https://ndownloader.figshare.com/files/40282696
+251,test,canine lymphoma,3D Histech,VMU Vienna,Canine,251.tiff,129777570,https://ndownloader.figshare.com/files/40282732
+252,test,canine lymphoma,3D Histech,VMU Vienna,Canine,252.tiff,129777570,https://ndownloader.figshare.com/files/40282699
+253,test,canine lymphoma,3D Histech,VMU Vienna,Canine,253.tiff,129777570,https://ndownloader.figshare.com/files/40282756
+254,train,canine lymphoma,3D Histech,VMU Vienna,Canine,254.tiff,129777570,https://ndownloader.figshare.com/files/40282705
+255,train,canine lymphoma,3D Histech,VMU Vienna,Canine,255.tiff,129777570,https://ndownloader.figshare.com/files/40282762
+256,test,canine lymphoma,3D Histech,VMU Vienna,Canine,256.tiff,129777570,https://ndownloader.figshare.com/files/40282702
+257,test,canine lymphoma,3D Histech,VMU Vienna,Canine,257.tiff,129777570,https://ndownloader.figshare.com/files/40282765
+258,train,canine lymphoma,3D Histech,VMU Vienna,Canine,258.tiff,129777570,https://ndownloader.figshare.com/files/40282711
+259,train,canine lymphoma,3D Histech,VMU Vienna,Canine,259.tiff,129777570,https://ndownloader.figshare.com/files/40282768
+260,train,canine lymphoma,3D Histech,VMU Vienna,Canine,260.tiff,129777570,https://ndownloader.figshare.com/files/40282771
+261,train,canine lymphoma,3D Histech,VMU Vienna,Canine,261.tiff,129777570,https://ndownloader.figshare.com/files/40282774
+262,train,canine lymphoma,3D Histech,VMU Vienna,Canine,262.tiff,129777570,https://ndownloader.figshare.com/files/40282726
+263,train,canine lymphoma,3D Histech,VMU Vienna,Canine,263.tiff,129777570,https://ndownloader.figshare.com/files/40282813
+264,train,canine lymphoma,3D Histech,VMU Vienna,Canine,264.tiff,129777570,https://ndownloader.figshare.com/files/40282729
+265,train,canine lymphoma,3D Histech,VMU Vienna,Canine,265.tiff,129777570,https://ndownloader.figshare.com/files/40282795
+266,train,canine lymphoma,3D Histech,VMU Vienna,Canine,266.tiff,129777570,https://ndownloader.figshare.com/files/40282741
+267,train,canine lymphoma,3D Histech,VMU Vienna,Canine,267.tiff,129777570,https://ndownloader.figshare.com/files/40282798
+268,test,canine lymphoma,3D Histech,VMU Vienna,Canine,268.tiff,129777570,https://ndownloader.figshare.com/files/40282735
+269,test,canine lymphoma,3D Histech,VMU Vienna,Canine,269.tiff,129777570,https://ndownloader.figshare.com/files/40282807
+270,train,canine lymphoma,3D Histech,VMU Vienna,Canine,270.tiff,129777570,https://ndownloader.figshare.com/files/40282738
+271,train,canine lymphoma,3D Histech,VMU Vienna,Canine,271.tiff,129777570,https://ndownloader.figshare.com/files/40282819
+272,train,canine lymphoma,3D Histech,VMU Vienna,Canine,272.tiff,129777570,https://ndownloader.figshare.com/files/40282759
+273,train,canine lymphoma,3D Histech,VMU Vienna,Canine,273.tiff,129777570,https://ndownloader.figshare.com/files/40282810
+274,train,canine lymphoma,3D Histech,VMU Vienna,Canine,274.tiff,129777570,https://ndownloader.figshare.com/files/40282747
+275,train,canine lymphoma,3D Histech,VMU Vienna,Canine,275.tiff,129777570,https://ndownloader.figshare.com/files/40282822
+276,test,canine lymphoma,3D Histech,VMU Vienna,Canine,276.tiff,129777570,https://ndownloader.figshare.com/files/40282744
+277,train,canine lymphoma,3D Histech,VMU Vienna,Canine,277.tiff,129777570,https://ndownloader.figshare.com/files/40282828
+278,train,canine lymphoma,3D Histech,VMU Vienna,Canine,278.tiff,129777570,https://ndownloader.figshare.com/files/40282777
+279,train,canine lymphoma,3D Histech,VMU Vienna,Canine,279.tiff,129777570,https://ndownloader.figshare.com/files/40282849
+280,train,canine lymphoma,3D Histech,VMU Vienna,Canine,280.tiff,129777570,https://ndownloader.figshare.com/files/40282780
+281,train,canine lymphoma,3D Histech,VMU Vienna,Canine,281.tiff,129777570,https://ndownloader.figshare.com/files/40282840
+282,train,canine lymphoma,3D Histech,VMU Vienna,Canine,282.tiff,129777570,https://ndownloader.figshare.com/files/40282801
+283,train,canine lymphoma,3D Histech,VMU Vienna,Canine,283.tiff,129777570,https://ndownloader.figshare.com/files/40282858
+284,train,canine lymphoma,3D Histech,VMU Vienna,Canine,284.tiff,129777570,https://ndownloader.figshare.com/files/40282786
+285,train,canine lymphoma,3D Histech,VMU Vienna,Canine,285.tiff,129777570,https://ndownloader.figshare.com/files/40282852
+286,train,canine lymphoma,3D Histech,VMU Vienna,Canine,286.tiff,129777570,https://ndownloader.figshare.com/files/40282789
+287,train,canine lymphoma,3D Histech,VMU Vienna,Canine,287.tiff,129777570,https://ndownloader.figshare.com/files/40282864
+288,train,canine lymphoma,3D Histech,VMU Vienna,Canine,288.tiff,129777570,https://ndownloader.figshare.com/files/40282783
+289,train,canine lymphoma,3D Histech,VMU Vienna,Canine,289.tiff,129777570,https://ndownloader.figshare.com/files/40282855
+290,train,canine lymphoma,3D Histech,VMU Vienna,Canine,290.tiff,129777570,https://ndownloader.figshare.com/files/40282792
+291,test,canine lymphoma,3D Histech,VMU Vienna,Canine,291.tiff,129777570,https://ndownloader.figshare.com/files/40282867
+292,test,canine lymphoma,3D Histech,VMU Vienna,Canine,292.tiff,129777570,https://ndownloader.figshare.com/files/40282804
+293,train,canine lymphoma,3D Histech,VMU Vienna,Canine,293.tiff,129777570,https://ndownloader.figshare.com/files/40282876
+294,train,canine lymphoma,3D Histech,VMU Vienna,Canine,294.tiff,129777570,https://ndownloader.figshare.com/files/40282816
+295,test,canine lymphoma,3D Histech,VMU Vienna,Canine,295.tiff,129777570,https://ndownloader.figshare.com/files/40282888
+296,train,canine lymphoma,3D Histech,VMU Vienna,Canine,296.tiff,129777570,https://ndownloader.figshare.com/files/40282831
+297,train,canine lymphoma,3D Histech,VMU Vienna,Canine,297.tiff,129777570,https://ndownloader.figshare.com/files/40282894
+298,train,canine lymphoma,3D Histech,VMU Vienna,Canine,298.tiff,129777570,https://ndownloader.figshare.com/files/40282825
+299,train,canine lymphoma,3D Histech,VMU Vienna,Canine,299.tiff,129777570,https://ndownloader.figshare.com/files/40282900
+300,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,300.tiff,124685186,https://ndownloader.figshare.com/files/40282834
+301,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,301.tiff,124685186,https://ndownloader.figshare.com/files/40282903
+302,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,302.tiff,124685186,https://ndownloader.figshare.com/files/40282843
+303,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,303.tiff,124685186,https://ndownloader.figshare.com/files/40282897
+304,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,304.tiff,124685186,https://ndownloader.figshare.com/files/40282837
+305,test,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,305.tiff,124685186,https://ndownloader.figshare.com/files/40282915
+306,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,306.tiff,124685186,https://ndownloader.figshare.com/files/40282846
+307,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,307.tiff,124685186,https://ndownloader.figshare.com/files/40282918
+308,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,308.tiff,124685186,https://ndownloader.figshare.com/files/40282861
+309,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,309.tiff,124685186,https://ndownloader.figshare.com/files/40282933
+310,test,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,310.tiff,124685186,https://ndownloader.figshare.com/files/40282879
+311,test,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,311.tiff,124685186,https://ndownloader.figshare.com/files/40282939
+312,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,312.tiff,124685186,https://ndownloader.figshare.com/files/40282873
+313,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,313.tiff,124685186,https://ndownloader.figshare.com/files/40282951
+314,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,314.tiff,124685186,https://ndownloader.figshare.com/files/40282870
+315,test,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,315.tiff,124685186,https://ndownloader.figshare.com/files/40282945
+316,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,316.tiff,124685186,https://ndownloader.figshare.com/files/40282882
+317,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,317.tiff,124685186,https://ndownloader.figshare.com/files/40282885
+318,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,318.tiff,124685186,https://ndownloader.figshare.com/files/40282948
+319,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,319.tiff,124646506,https://ndownloader.figshare.com/files/40282891
+320,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,320.tiff,124685186,https://ndownloader.figshare.com/files/40282957
+321,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,321.tiff,124685186,https://ndownloader.figshare.com/files/40282963
+322,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,322.tiff,124685186,https://ndownloader.figshare.com/files/40282906
+323,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,323.tiff,124685186,https://ndownloader.figshare.com/files/40282969
+324,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,324.tiff,124685186,https://ndownloader.figshare.com/files/40282921
+325,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,325.tiff,124685186,https://ndownloader.figshare.com/files/40282978
+326,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,326.tiff,124685186,https://ndownloader.figshare.com/files/40282909
+327,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,327.tiff,124685186,https://ndownloader.figshare.com/files/40282912
+328,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,328.tiff,124685186,https://ndownloader.figshare.com/files/40282993
+329,test,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,329.tiff,124685186,https://ndownloader.figshare.com/files/40282990
+330,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,330.tiff,124685186,https://ndownloader.figshare.com/files/40282924
+331,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,331.tiff,124685186,https://ndownloader.figshare.com/files/40282999
+332,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,332.tiff,124685186,https://ndownloader.figshare.com/files/40282927
+333,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,333.tiff,124685186,https://ndownloader.figshare.com/files/40282996
+334,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,334.tiff,124685186,https://ndownloader.figshare.com/files/40283005
+335,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,335.tiff,124685186,https://ndownloader.figshare.com/files/40282930
+336,test,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,336.tiff,124685186,https://ndownloader.figshare.com/files/40283014
+337,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,337.tiff,124685186,https://ndownloader.figshare.com/files/40282936
+338,test,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,338.tiff,124685186,https://ndownloader.figshare.com/files/40283008
+339,test,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,339.tiff,124685186,https://ndownloader.figshare.com/files/40282942
+340,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,340.tiff,124685186,https://ndownloader.figshare.com/files/40283029
+341,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,341.tiff,124685186,https://ndownloader.figshare.com/files/40282960
+342,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,342.tiff,124685186,https://ndownloader.figshare.com/files/40282954
+343,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,343.tiff,124685186,https://ndownloader.figshare.com/files/40283038
+344,test,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,344.tiff,124685186,https://ndownloader.figshare.com/files/40282966
+345,test,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,345.tiff,124685186,https://ndownloader.figshare.com/files/40283071
+346,test,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,346.tiff,124685186,https://ndownloader.figshare.com/files/40282972
+347,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,347.tiff,124685186,https://ndownloader.figshare.com/files/40283044
+348,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,348.tiff,124685186,https://ndownloader.figshare.com/files/40282975
+349,train,canine cutaneous mast cell tumor,Aperio CS2,FU Berlin,Canine,349.tiff,124685186,https://ndownloader.figshare.com/files/40283047
+350,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,350.tiff,156190526,https://ndownloader.figshare.com/files/40282984
+351,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,351.tiff,156190526,https://ndownloader.figshare.com/files/40283041
+352,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,352.tiff,156190526,https://ndownloader.figshare.com/files/40282987
+353,test,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,353.tiff,156190526,https://ndownloader.figshare.com/files/40283056
+354,test,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,354.tiff,156190526,https://ndownloader.figshare.com/files/40282981
+355,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,355.tiff,156190526,https://ndownloader.figshare.com/files/40283062
+356,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,356.tiff,156190526,https://ndownloader.figshare.com/files/40283002
+357,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,357.tiff,156190526,https://ndownloader.figshare.com/files/40283017
+358,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,358.tiff,156190526,https://ndownloader.figshare.com/files/40283074
+359,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,359.tiff,156190526,https://ndownloader.figshare.com/files/40283023
+360,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,360.tiff,156190526,https://ndownloader.figshare.com/files/40283086
+361,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,361.tiff,156190526,https://ndownloader.figshare.com/files/40283020
+362,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,362.tiff,156190526,https://ndownloader.figshare.com/files/40283083
+363,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,363.tiff,156190526,https://ndownloader.figshare.com/files/40283032
+364,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,364.tiff,156190526,https://ndownloader.figshare.com/files/40283101
+365,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,365.tiff,156190526,https://ndownloader.figshare.com/files/40283026
+366,test,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,366.tiff,156190526,https://ndownloader.figshare.com/files/40283092
+367,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,367.tiff,156190526,https://ndownloader.figshare.com/files/40283059
+368,test,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,368.tiff,156190526,https://ndownloader.figshare.com/files/40283095
+369,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,369.tiff,156190526,https://ndownloader.figshare.com/files/40283119
+370,test,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,370.tiff,156190526,https://ndownloader.figshare.com/files/40283116
+371,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,371.tiff,156190526,https://ndownloader.figshare.com/files/40283113
+372,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,372.tiff,156190526,https://ndownloader.figshare.com/files/40283035
+373,test,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,373.tiff,156190526,https://ndownloader.figshare.com/files/40283131
+374,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,374.tiff,156190526,https://ndownloader.figshare.com/files/40283050
+375,test,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,375.tiff,156190526,https://ndownloader.figshare.com/files/40283134
+376,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,376.tiff,156190526,https://ndownloader.figshare.com/files/40283053
+377,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,377.tiff,156190526,https://ndownloader.figshare.com/files/40283137
+378,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,378.tiff,156190526,https://ndownloader.figshare.com/files/40283068
+379,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,379.tiff,156190526,https://ndownloader.figshare.com/files/40283146
+380,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,380.tiff,156190526,https://ndownloader.figshare.com/files/40283065
+381,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,381.tiff,156190526,https://ndownloader.figshare.com/files/40283149
+382,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,382.tiff,156190526,https://ndownloader.figshare.com/files/40283158
+383,test,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,383.tiff,156190526,https://ndownloader.figshare.com/files/40283167
+384,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,384.tiff,156190526,https://ndownloader.figshare.com/files/40283179
+385,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,385.tiff,156190526,https://ndownloader.figshare.com/files/40283077
+386,test,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,386.tiff,156190526,https://ndownloader.figshare.com/files/40283188
+387,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,387.tiff,156190526,https://ndownloader.figshare.com/files/40283089
+388,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,388.tiff,156190526,https://ndownloader.figshare.com/files/40283173
+389,test,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,389.tiff,156190526,https://ndownloader.figshare.com/files/40283080
+390,test,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,390.tiff,156190526,https://ndownloader.figshare.com/files/40283182
+391,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,391.tiff,156190526,https://ndownloader.figshare.com/files/40283098
+392,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,392.tiff,156190526,https://ndownloader.figshare.com/files/40283200
+393,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,393.tiff,156190526,https://ndownloader.figshare.com/files/40283107
+394,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,394.tiff,156190526,https://ndownloader.figshare.com/files/40283236
+395,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,395.tiff,156190526,https://ndownloader.figshare.com/files/40283110
+396,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,396.tiff,156190526,https://ndownloader.figshare.com/files/40283245
+397,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,397.tiff,156190526,https://ndownloader.figshare.com/files/40283104
+398,test,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,398.tiff,156190526,https://ndownloader.figshare.com/files/40283278
+399,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,399.tiff,156190526,https://ndownloader.figshare.com/files/40283122
+400,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,400.tiff,156190526,https://ndownloader.figshare.com/files/40283287
+401,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,401.tiff,156190526,https://ndownloader.figshare.com/files/40283293
+402,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,402.tiff,156190526,https://ndownloader.figshare.com/files/40283125
+403,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,403.tiff,156190526,https://ndownloader.figshare.com/files/40283302
+404,train,human neuroendocrine tumor,Hamamatsu XR,UMC Utrecht,Human,404.tiff,156190526,https://ndownloader.figshare.com/files/40283128
+405,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,405.tiff,129777570,https://ndownloader.figshare.com/files/40283311
+406,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,406.tiff,129777570,https://ndownloader.figshare.com/files/40283164
+407,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,407.tiff,129777570,https://ndownloader.figshare.com/files/40283326
+408,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,408.tiff,129777570,https://ndownloader.figshare.com/files/40283143
+409,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,409.tiff,129777570,https://ndownloader.figshare.com/files/40283335
+410,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,410.tiff,129777570,https://ndownloader.figshare.com/files/40283140
+411,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,411.tiff,129777570,https://ndownloader.figshare.com/files/40283338
+412,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,412.tiff,129777570,https://ndownloader.figshare.com/files/40283350
+413,test,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,413.tiff,129777570,https://ndownloader.figshare.com/files/40283155
+414,test,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,414.tiff,129777570,https://ndownloader.figshare.com/files/40283365
+415,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,415.tiff,129777570,https://ndownloader.figshare.com/files/40283152
+416,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,416.tiff,129777570,https://ndownloader.figshare.com/files/40283362
+417,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,417.tiff,129777570,https://ndownloader.figshare.com/files/40283161
+418,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,418.tiff,129777570,https://ndownloader.figshare.com/files/40283368
+419,test,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,419.tiff,129777570,https://ndownloader.figshare.com/files/40283170
+420,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,420.tiff,129777570,https://ndownloader.figshare.com/files/40283371
+421,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,421.tiff,129777570,https://ndownloader.figshare.com/files/40283176
+422,test,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,422.tiff,129777570,https://ndownloader.figshare.com/files/40283386
+423,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,423.tiff,129777570,https://ndownloader.figshare.com/files/40283194
+424,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,424.tiff,129777570,https://ndownloader.figshare.com/files/40283389
+425,test,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,425.tiff,129777570,https://ndownloader.figshare.com/files/40283212
+426,test,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,426.tiff,129777570,https://ndownloader.figshare.com/files/40283380
+427,test,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,427.tiff,129777570,https://ndownloader.figshare.com/files/40283242
+428,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,428.tiff,129777570,https://ndownloader.figshare.com/files/40283392
+429,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,429.tiff,129777570,https://ndownloader.figshare.com/files/40283221
+430,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,430.tiff,129777570,https://ndownloader.figshare.com/files/40283407
+431,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,431.tiff,129777570,https://ndownloader.figshare.com/files/40283206
+432,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,432.tiff,129777570,https://ndownloader.figshare.com/files/40283224
+433,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,433.tiff,129777570,https://ndownloader.figshare.com/files/40283257
+434,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,434.tiff,129777570,https://ndownloader.figshare.com/files/40283419
+435,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,435.tiff,129777570,https://ndownloader.figshare.com/files/40283263
+436,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,436.tiff,129777570,https://ndownloader.figshare.com/files/40283320
+437,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,437.tiff,129777570,https://ndownloader.figshare.com/files/40283428
+438,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,438.tiff,129777570,https://ndownloader.figshare.com/files/40283329
+439,test,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,439.tiff,129777570,https://ndownloader.figshare.com/files/40283425
+440,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,440.tiff,129777570,https://ndownloader.figshare.com/files/40283332
+441,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,441.tiff,129777570,https://ndownloader.figshare.com/files/40283434
+442,test,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,442.tiff,129777570,https://ndownloader.figshare.com/files/40283344
+443,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,443.tiff,129777570,https://ndownloader.figshare.com/files/40283440
+444,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,444.tiff,129777570,https://ndownloader.figshare.com/files/40283341
+445,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,445.tiff,129777570,https://ndownloader.figshare.com/files/40283431
+446,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,446.tiff,129777570,https://ndownloader.figshare.com/files/40283347
+447,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,447.tiff,129777570,https://ndownloader.figshare.com/files/40283446
+448,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,448.tiff,129777570,https://ndownloader.figshare.com/files/40283356
+449,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,449.tiff,129777570,https://ndownloader.figshare.com/files/40283452
+450,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,450.tiff,129777570,https://ndownloader.figshare.com/files/40283353
+451,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,451.tiff,129777570,https://ndownloader.figshare.com/files/40283461
+452,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,452.tiff,129777570,https://ndownloader.figshare.com/files/40283359
+453,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,453.tiff,129777570,https://ndownloader.figshare.com/files/40283479
+454,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,454.tiff,129777570,https://ndownloader.figshare.com/files/40283374
+455,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,455.tiff,129777570,https://ndownloader.figshare.com/files/40283473
+456,test,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,456.tiff,129777570,https://ndownloader.figshare.com/files/40283377
+457,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,457.tiff,129777570,https://ndownloader.figshare.com/files/40283383
+458,test,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,458.tiff,129777570,https://ndownloader.figshare.com/files/40283488
+459,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,459.tiff,129777570,https://ndownloader.figshare.com/files/40283401
+460,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,460.tiff,129777570,https://ndownloader.figshare.com/files/40283497
+461,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,461.tiff,129777570,https://ndownloader.figshare.com/files/40283395
+462,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,462.tiff,129777570,https://ndownloader.figshare.com/files/40283509
+463,test,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,463.tiff,129777570,https://ndownloader.figshare.com/files/40283503
+464,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,464.tiff,129777570,https://ndownloader.figshare.com/files/40283410
+465,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,465.tiff,129777570,https://ndownloader.figshare.com/files/40283506
+466,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,466.tiff,129777570,https://ndownloader.figshare.com/files/40283413
+467,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,467.tiff,129777570,https://ndownloader.figshare.com/files/40283521
+468,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,468.tiff,129777570,https://ndownloader.figshare.com/files/40283416
+469,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,469.tiff,129777570,https://ndownloader.figshare.com/files/40283524
+470,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,470.tiff,129777570,https://ndownloader.figshare.com/files/40283422
+471,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,471.tiff,129777570,https://ndownloader.figshare.com/files/40283527
+472,test,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,472.tiff,129777570,https://ndownloader.figshare.com/files/40283437
+473,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,473.tiff,129777570,https://ndownloader.figshare.com/files/40283539
+474,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,474.tiff,129777570,https://ndownloader.figshare.com/files/40283443
+475,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,475.tiff,129777570,https://ndownloader.figshare.com/files/40283536
+476,test,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,476.tiff,129777570,https://ndownloader.figshare.com/files/40283449
+477,test,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,477.tiff,129777570,https://ndownloader.figshare.com/files/40283545
+478,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,478.tiff,129777570,https://ndownloader.figshare.com/files/40283458
+479,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,479.tiff,129777570,https://ndownloader.figshare.com/files/40283563
+480,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,480.tiff,129777570,https://ndownloader.figshare.com/files/40283464
+481,test,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,481.tiff,129777570,https://ndownloader.figshare.com/files/40283560
+482,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,482.tiff,129777570,https://ndownloader.figshare.com/files/40283455
+483,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,483.tiff,129777570,https://ndownloader.figshare.com/files/40283572
+484,test,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,484.tiff,129777570,https://ndownloader.figshare.com/files/40283476
+485,test,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,485.tiff,129777570,https://ndownloader.figshare.com/files/40283593
+486,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,486.tiff,129777570,https://ndownloader.figshare.com/files/40283467
+487,test,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,487.tiff,129777570,https://ndownloader.figshare.com/files/40283575
+488,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,488.tiff,129777570,https://ndownloader.figshare.com/files/40283587
+489,train,canine soft tissue sarcoma,3D Histech,AMC New York,Canine,489.tiff,129777570,https://ndownloader.figshare.com/files/40283494
+490,train,canine soft tissue sarcoma,3D Histech,VMU Vienna,Canine,490.tiff,129777570,https://ndownloader.figshare.com/files/40283596
+491,test,canine soft tissue sarcoma,3D Histech,VMU Vienna,Canine,491.tiff,129777570,https://ndownloader.figshare.com/files/40283482
+492,train,canine soft tissue sarcoma,3D Histech,VMU Vienna,Canine,492.tiff,129777570,https://ndownloader.figshare.com/files/40283491
+493,train,canine soft tissue sarcoma,3D Histech,VMU Vienna,Canine,493.tiff,129777570,https://ndownloader.figshare.com/files/40283599
+494,train,canine soft tissue sarcoma,3D Histech,VMU Vienna,Canine,494.tiff,129777570,https://ndownloader.figshare.com/files/40283500
+495,train,canine soft tissue sarcoma,3D Histech,VMU Vienna,Canine,495.tiff,129777570,https://ndownloader.figshare.com/files/40283605
+496,train,canine soft tissue sarcoma,3D Histech,VMU Vienna,Canine,496.tiff,129777570,https://ndownloader.figshare.com/files/40283614
+497,test,canine soft tissue sarcoma,3D Histech,VMU Vienna,Canine,497.tiff,129777570,https://ndownloader.figshare.com/files/40283512
+498,train,canine soft tissue sarcoma,3D Histech,VMU Vienna,Canine,498.tiff,129777570,https://ndownloader.figshare.com/files/40283617
+499,train,canine soft tissue sarcoma,3D Histech,VMU Vienna,Canine,499.tiff,129777570,https://ndownloader.figshare.com/files/40283518
+500,train,canine soft tissue sarcoma,3D Histech,VMU Vienna,Canine,500.tiff,129777570,https://ndownloader.figshare.com/files/40283632
+501,train,canine soft tissue sarcoma,3D Histech,VMU Vienna,Canine,501.tiff,129777570,https://ndownloader.figshare.com/files/40283515
+502,train,canine soft tissue sarcoma,3D Histech,VMU Vienna,Canine,502.tiff,129777570,https://ndownloader.figshare.com/files/40283641
+503,train,canine soft tissue sarcoma,3D Histech,VMU Vienna,Canine,503.tiff,129777570,https://ndownloader.figshare.com/files/40283533
+504,test,canine soft tissue sarcoma,3D Histech,VMU Vienna,Canine,504.tiff,129777570,https://ndownloader.figshare.com/files/40283644
+505,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,505.tiff,125608208,https://ndownloader.figshare.com/files/40283530
+506,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,506.tiff,151017218,https://ndownloader.figshare.com/files/40283647
+507,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,507.tiff,156986792,https://ndownloader.figshare.com/files/40283548
+508,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,508.tiff,132900018,https://ndownloader.figshare.com/files/40283650
+509,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,509.tiff,143513966,https://ndownloader.figshare.com/files/40283542
+510,test,human melanoma,Hamamatsu XR,UMC Utrecht,Human,510.tiff,152912192,https://ndownloader.figshare.com/files/40283656
+511,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,511.tiff,169205576,https://ndownloader.figshare.com/files/40283554
+512,test,human melanoma,Hamamatsu XR,UMC Utrecht,Human,512.tiff,144212062,https://ndownloader.figshare.com/files/40283668
+513,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,513.tiff,153502558,https://ndownloader.figshare.com/files/40283677
+514,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,514.tiff,155514428,https://ndownloader.figshare.com/files/40283557
+515,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,515.tiff,142284960,https://ndownloader.figshare.com/files/40283566
+516,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,516.tiff,143306132,https://ndownloader.figshare.com/files/40283674
+517,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,517.tiff,154258444,https://ndownloader.figshare.com/files/40283569
+518,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,518.tiff,140482464,https://ndownloader.figshare.com/files/40283680
+519,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,519.tiff,162860192,https://ndownloader.figshare.com/files/40283689
+520,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,520.tiff,157468130,https://ndownloader.figshare.com/files/40283584
+521,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,521.tiff,108331876,https://ndownloader.figshare.com/files/40283683
+522,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,522.tiff,132014972,https://ndownloader.figshare.com/files/40283581
+523,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,523.tiff,152879590,https://ndownloader.figshare.com/files/40283686
+524,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,524.tiff,166605320,https://ndownloader.figshare.com/files/40283578
+525,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,525.tiff,152478042,https://ndownloader.figshare.com/files/40283692
+526,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,526.tiff,171017680,https://ndownloader.figshare.com/files/40283602
+527,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,527.tiff,165055768,https://ndownloader.figshare.com/files/40283695
+528,test,human melanoma,Hamamatsu XR,UMC Utrecht,Human,528.tiff,166800094,https://ndownloader.figshare.com/files/40283611
+529,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,529.tiff,169312150,https://ndownloader.figshare.com/files/40283701
+530,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,530.tiff,143658120,https://ndownloader.figshare.com/files/40283608
+531,test,human melanoma,Hamamatsu XR,UMC Utrecht,Human,531.tiff,167032100,https://ndownloader.figshare.com/files/40283698
+532,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,532.tiff,151673930,https://ndownloader.figshare.com/files/40283620
+533,test,human melanoma,Hamamatsu XR,UMC Utrecht,Human,533.tiff,164537730,https://ndownloader.figshare.com/files/40283704
+534,test,human melanoma,Hamamatsu XR,UMC Utrecht,Human,534.tiff,153606218,https://ndownloader.figshare.com/files/40283707
+535,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,535.tiff,159791500,https://ndownloader.figshare.com/files/40283623
+536,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,536.tiff,152195010,https://ndownloader.figshare.com/files/40283719
+537,test,human melanoma,Hamamatsu XR,UMC Utrecht,Human,537.tiff,147600858,https://ndownloader.figshare.com/files/40283710
+538,test,human melanoma,Hamamatsu XR,UMC Utrecht,Human,538.tiff,161914142,https://ndownloader.figshare.com/files/40283629
+539,test,human melanoma,Hamamatsu XR,UMC Utrecht,Human,539.tiff,165946000,https://ndownloader.figshare.com/files/40283713
+540,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,540.tiff,160652348,https://ndownloader.figshare.com/files/40283635
+541,test,human melanoma,Hamamatsu XR,UMC Utrecht,Human,541.tiff,158270780,https://ndownloader.figshare.com/files/40283716
+542,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,542.tiff,157413490,https://ndownloader.figshare.com/files/40283638
+543,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,543.tiff,139375630,https://ndownloader.figshare.com/files/40283722
+544,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,544.tiff,161464878,https://ndownloader.figshare.com/files/40283653
+545,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,545.tiff,141724752,https://ndownloader.figshare.com/files/40283725
+546,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,546.tiff,153383526,https://ndownloader.figshare.com/files/40283665
+547,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,547.tiff,138145400,https://ndownloader.figshare.com/files/40283728
+548,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,548.tiff,151813188,https://ndownloader.figshare.com/files/40283659
+549,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,549.tiff,161439740,https://ndownloader.figshare.com/files/40283731
+550,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,550.tiff,163481364,https://ndownloader.figshare.com/files/40283662
+551,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,551.tiff,165000718,https://ndownloader.figshare.com/files/40283734
+552,test,human melanoma,Hamamatsu XR,UMC Utrecht,Human,552.tiff,154307842,https://ndownloader.figshare.com/files/40283671
+553,train,human melanoma,Hamamatsu XR,UMC Utrecht,Human,553.tiff,161842060,https://ndownloader.figshare.com/files/40283740

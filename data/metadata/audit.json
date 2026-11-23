@@ -1,0 +1,113 @@
+{
+  "n_manifest_slides": 503,
+  "n_json_images": 553,
+  "n_json_only_images": 50,
+  "n_annotations_on_json_only_images": 0,
+  "n_annotations": 26286,
+  "n_positive_annotations": 11937,
+  "n_negative_annotations": 14349,
+  "n_slides_without_positive": 28,
+  "n_out_of_bounds_centres": 2,
+  "n_bad_geometry_boxes": 0,
+  "species_counts": {
+    "Human": 254,
+    "Canine": 249
+  },
+  "scanner_raw_values": [
+    "3D Histech",
+    "Aperio CS2",
+    "Hamamatsu S360",
+    "Hamamatsu XR",
+    "Hamammatsu XR"
+  ],
+  "scanner_normalized_values": [
+    "3D Histech",
+    "Aperio CS2",
+    "Hamamatsu S360",
+    "Hamamatsu XR"
+  ],
+  "origin_values": [
+    "AMC New York",
+    "FU Berlin",
+    "UMC Utrecht",
+    "VMU Vienna"
+  ],
+  "official_split_counts": {
+    "train": 392,
+    "test": 111
+  },
+  "file_hashes": {
+    "manifest": {
+      "path": "D:\\projects\\Mitotic-Count-Error-Detection\\data\\metadata\\datasets_xvalidation.csv",
+      "sha256": "211140f590199d50ee98d923ddc923c382c3a5543ea3b430612c3624570b26b8",
+      "bytes": 31405
+    },
+    "annotations": {
+      "path": "D:\\projects\\Mitotic-Count-Error-Detection\\data\\metadata\\MIDOG++.json",
+      "sha256": "8c87ab4276eb11f6b6b5ac0d956b89dad7568a5474e0904b653d54dc68091f47",
+      "bytes": 2759851
+    }
+  },
+  "cohort": [
+    {
+      "role": "source_train",
+      "n_specimens": 20,
+      "n_positive_annotations": 178,
+      "scanners": "Aperio CS2, Hamamatsu S360, Hamamatsu XR",
+      "origins": "UMC Utrecht",
+      "size_gib": 2.68
+    },
+    {
+      "role": "source_calib",
+      "n_specimens": 5,
+      "n_positive_annotations": 24,
+      "scanners": "Aperio CS2, Hamamatsu S360, Hamamatsu XR",
+      "origins": "UMC Utrecht",
+      "size_gib": 0.66
+    },
+    {
+      "role": "source_assess",
+      "n_specimens": 8,
+      "n_positive_annotations": 57,
+      "scanners": "Aperio CS2, Hamamatsu S360, Hamamatsu XR",
+      "origins": "UMC Utrecht",
+      "size_gib": 1.07
+    },
+    {
+      "role": "target_pool",
+      "n_specimens": 12,
+      "n_positive_annotations": 161,
+      "scanners": "Hamamatsu XR",
+      "origins": "UMC Utrecht",
+      "size_gib": 1.71
+    },
+    {
+      "role": "target_assess",
+      "n_specimens": 10,
+      "n_positive_annotations": 162,
+      "scanners": "Hamamatsu XR",
+      "origins": "UMC Utrecht",
+      "size_gib": 1.39
+    }
+  ],
+  "cohort_total_gib": 7.51,
+  "historical_pilot_slides": [
+    1,
+    24,
+    34,
+    39,
+    72,
+    78,
+    94,
+    134,
+    139,
+    400,
+    401,
+    402,
+    404,
+    526,
+    535,
+    542,
+    548
+  ]
+}

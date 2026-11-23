@@ -1,0 +1,162 @@
+{
+  "name": "cohort_v1",
+  "seed": 20261026,
+  "roles": {
+    "source_train": [
+      3,
+      8,
+      23,
+      38,
+      40,
+      48,
+      60,
+      69,
+      75,
+      76,
+      79,
+      92,
+      98,
+      105,
+      112,
+      122,
+      126,
+      127,
+      132,
+      138
+    ],
+    "source_calib": [
+      16,
+      63,
+      99,
+      101,
+      103
+    ],
+    "source_assess": [
+      11,
+      25,
+      43,
+      67,
+      91,
+      114,
+      119,
+      135
+    ],
+    "target_pool": [
+      505,
+      506,
+      509,
+      511,
+      513,
+      525,
+      529,
+      530,
+      543,
+      550,
+      551,
+      553
+    ],
+    "target_assess": [
+      515,
+      518,
+      521,
+      523,
+      524,
+      527,
+      532,
+      536,
+      546,
+      549
+    ]
+  },
+  "manifest_sha256": "211140f590199d50ee98d923ddc923c382c3a5543ea3b430612c3624570b26b8",
+  "notes": "Blueprint cohort, validated against the official manifest. Official training records used for development; not the official test set.",
+  "role_metadata": {
+    "source_train": {
+      "n_slides": 20,
+      "n_positives": 178,
+      "tumors": {
+        "human breast cancer": 20
+      },
+      "scanners": {
+        "Hamamatsu S360": 7,
+        "Aperio CS2": 7,
+        "Hamamatsu XR": 6
+      },
+      "origins": {
+        "UMC Utrecht": 20
+      },
+      "official_splits": {
+        "train": 20
+      }
+    },
+    "source_calib": {
+      "n_slides": 5,
+      "n_positives": 24,
+      "tumors": {
+        "human breast cancer": 5
+      },
+      "scanners": {
+        "Hamamatsu S360": 2,
+        "Aperio CS2": 2,
+        "Hamamatsu XR": 1
+      },
+      "origins": {
+        "UMC Utrecht": 5
+      },
+      "official_splits": {
+        "train": 5
+      }
+    },
+    "source_assess": {
+      "n_slides": 8,
+      "n_positives": 57,
+      "tumors": {
+        "human breast cancer": 8
+      },
+      "scanners": {
+        "Hamamatsu XR": 3,
+        "Aperio CS2": 3,
+        "Hamamatsu S360": 2
+      },
+      "origins": {
+        "UMC Utrecht": 8
+      },
+      "official_splits": {
+        "train": 8
+      }
+    },
+    "target_pool": {
+      "n_slides": 12,
+      "n_positives": 161,
+      "tumors": {
+        "human melanoma": 12
+      },
+      "scanners": {
+        "Hamamatsu XR": 12
+      },
+      "origins": {
+        "UMC Utrecht": 12
+      },
+      "official_splits": {
+        "train": 12
+      }
+    },
+    "target_assess": {
+      "n_slides": 10,
+      "n_positives": 162,
+      "tumors": {
+        "human melanoma": 10
+      },
+      "scanners": {
+        "Hamamatsu XR": 10
+      },
+      "origins": {
+        "UMC Utrecht": 10
+      },
+      "official_splits": {
+        "train": 10
+      }
+    }
+  },
+  "payload_sha256": "521a74669cc4462378344d883e9ed4d67f49a146b28d39fed388aed1c5374448"
+}

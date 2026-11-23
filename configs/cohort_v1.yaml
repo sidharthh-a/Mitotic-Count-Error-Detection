@@ -1,0 +1,22 @@
+# Frozen development cohort, seed 20261026.
+#
+# Transcribed from the research blueprint, then validated against the official manifest
+# by `python scripts/build_cohort.py`. Validation checks that every specimen exists, is in
+# the official training split, is the expected tumour type, is used exactly once, and was
+# not part of the historical Mac pilot set.
+#
+# Limitations recorded with the cohort (see docs/DATASET_AUDIT.md):
+#  * melanoma specimens all come from one origin (UMC Utrecht) on one scanner
+#    (Hamamatsu XR), so tumour type and acquisition are confounded in the target domain;
+#  * the "Hamammatsu XR" spelling in the manifest is normalised to "Hamamatsu XR";
+#  * these are official *training* records used for development, not the official test set.
+
+name: cohort_v1
+seed: 20261026
+
+roles:
+  source_train: [3, 8, 23, 38, 40, 48, 60, 69, 75, 76, 79, 92, 98, 105, 112, 122, 126, 127, 132, 138]
+  source_calib: [16, 63, 99, 101, 103]
+  source_assess: [11, 25, 43, 67, 91, 114, 119, 135]
+  target_pool: [505, 506, 509, 511, 513, 525, 529, 530, 543, 550, 551, 553]
+  target_assess: [515, 518, 521, 523, 524, 527, 532, 536, 546, 549]

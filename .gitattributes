@@ -1,0 +1,13 @@
+# Line endings: sources normalised to LF so Windows and Linux checkouts match.
+* text=auto eol=lf
+*.py    text eol=lf
+*.md    text eol=lf
+*.yaml  text eol=lf
+*.yml   text eol=lf
+*.txt   text eol=lf
+
+# Frozen artefacts are verified by sha256 digest; their bytes must never be
+# rewritten by checkout or autocrlf, on any platform.
+data/splits/*.csv   -text
+data/splits/*.json  -text
+outputs/metadata/*.json -text

@@ -1,0 +1,15 @@
+{
+  "mean": [
+    0.7953302525066247,
+    0.5889999463074787,
+    0.7459576314409434
+  ],
+  "std": [
+    0.1144859749439485,
+    0.15496180353144376,
+    0.10486409971768974
+  ],
+  "mode": "source_train_specimens",
+  "n_specimens": 20,
+  "note": "Computed only from source-domain training specimens, never from target data."
+}
