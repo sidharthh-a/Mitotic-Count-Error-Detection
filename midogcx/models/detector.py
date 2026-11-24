@@ -202,6 +202,23 @@ def set_trainable_backbone_layers(model: nn.Module, trainable_layers: int) -> li
     )
 
 
+def require_device(device: str | torch.device) -> str:
+    """Reject a cuda device on a CPU-only torch build with one readable line.
+
+    Without this, ``model.to("cuda")`` fails deep inside ``nn.Module._apply`` with
+    ``AssertionError: Torch not compiled with CUDA enabled``, after a run directory has
+    already been created. The device actually available is what the caller needs to know.
+    """
+    name = str(device)
+    if name.split(":")[0] != "cpu" and not torch.cuda.is_available():
+        raise SystemExit(
+            f"device '{name}' requested but this torch build has no CUDA "
+            f"(torch {torch.__version__}, cuda available: False). "
+            f"Use device 'cpu', or run on a CUDA build/runtime."
+        )
+    return name
+
+
 def load_checkpoint(path: str | Path, device: str | torch.device = "cpu") -> tuple[nn.Module, dict]:
     """Rebuild the architecture from the checkpoint's own config and load its weights.
 
@@ -217,6 +234,7 @@ def load_checkpoint(path: str | Path, device: str | torch.device = "cpu") -> tup
     """
     from dataclasses import replace
 
+    require_device(device)
     payload = torch.load(path, map_location="cpu", weights_only=False)
     cfg = DetectorConfig.from_dict(payload.get("detector_config") or {})
     model = build_detector(replace(cfg, pretrained="none"))

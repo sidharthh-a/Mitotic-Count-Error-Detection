@@ -27,6 +27,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 import numpy as np
 import pandas as pd
+import torch
 
 from midogcx.acquisition import build_feature_rows, fit_predictors
 from midogcx.adaptation.trainer import TrainConfig, detector_loss_per_region, train_detector
@@ -91,6 +92,14 @@ def main(argv: list[str] | None = None) -> int:
     cfg = load_config(args.config, args.set)
     data_root = resolve_data_root(cfg)
     device = args.device or ("cuda" if _cuda() else "cpu")
+    if device != "cpu" and not torch.cuda.is_available():
+        # Fail before a run directory is created: the failure mode without this is a
+        # traceback from inside nn.Module._apply, several seconds after the run starts.
+        ap.error(
+            f"--device {device} needs a CUDA build of torch; this interpreter has "
+            f"torch {torch.__version__} with cuda available: False. "
+            f"Pass --device cpu, or run on a GPU runtime."
+        )
     index = build_index(resolve_path(cfg, "paths.manifest"), resolve_path(cfg, "paths.annotations"))
     cohort = load_cohort_safe(cfg)
     regions_df = pd.read_csv(resolve_path(cfg, "paths.regions"))

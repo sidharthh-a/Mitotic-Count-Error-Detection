@@ -87,3 +87,22 @@ def test_checkpoint_with_wrong_head_size_is_rejected(tiny_model, tmp_path):
 
     with pytest.raises(RuntimeError, match="incompatible"):
         load_checkpoint(path)
+
+def test_require_device_rejects_cuda_on_a_cpu_only_build(monkeypatch):
+    """A CPU-only torch must name the device it lacks, not raise from nn.Module._apply."""
+    from midogcx.models import detector
+
+    monkeypatch.setattr(detector.torch.cuda, "is_available", lambda: False)
+    with pytest.raises(SystemExit, match="no CUDA"):
+        detector.require_device("cuda")
+    with pytest.raises(SystemExit, match="no CUDA"):
+        detector.require_device("cuda:0")
+    assert detector.require_device("cpu") == "cpu"
+
+
+def test_require_device_accepts_cuda_when_available(monkeypatch):
+    from midogcx.models import detector
+
+    monkeypatch.setattr(detector.torch.cuda, "is_available", lambda: True)
+    assert detector.require_device("cuda") == "cuda"
+    assert detector.require_device("cuda:1") == "cuda:1"

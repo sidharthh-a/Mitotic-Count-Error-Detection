@@ -58,7 +58,7 @@ where the same steps are only slower, not different.
 | 2 | GPU identity | `Tesla T4, 15360 MiB` | GPU present |
 | 3 | install deps, pick `DEVICE` | `DEVICE = cuda` (or `cpu` + cost warning) | warns on CPU, does not stop |
 | 5 | mount Drive, set `MIDOG_DATA_ROOT` | cwd + free space | `midogcx_project` found |
-| 6 | `pytest tests/ -q` | `115 passed` | **stop if any fail** |
+| 6 | `pytest tests/ -q` | `117 passed` | **stop if any fail** |
 | 8 | `build_cohort.py --check` | `cohort verified unchanged (…)` | **stop if it errors** |
 | 9 | `download_specimens.py --dry-run` | per-file sizes, "can hold" | advisement only |
 | 10 | `download_specimens.py` | `already present` × 55, or downloads | skip if images are on Drive |
@@ -191,7 +191,7 @@ That is fixed in `midogcx/models/error_predictor.py`, `midogcx/acquisition.py` a
 
 1. Copy the fixed `midogcx/`, `scripts/` and `configs/` from the project archive over the
    copy on Drive (no data or checkpoint needs to move).
-2. In Colab, re-run cell 6 (`pytest -q`, expect **115 passed**). If this fails, stop: the
+2. In Colab, re-run cell 6 (`pytest -q`, expect **117 passed**). If this fails, stop: the
    Drive copy is not the fixed code.
 3. Re-run cell 15 to set `SOURCE_CKPT`, then cell 17. The exact command is:
 
