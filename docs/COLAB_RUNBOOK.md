@@ -25,7 +25,11 @@ Compress-Archive -Path * -DestinationPath "$env:USERPROFILE\Desktop\midogcx_proj
 Upload that zip to Drive, then unzip it in Drive so the layout is
 `MyDrive/midogcx_project/scripts/...`, `MyDrive/midogcx_project/midogcx/...`.
 
-For the images, upload the folder `C:\midogpp_data` to Drive as `midogpp_data`. If uploading
+For the images, upload the folder `C:\midogpp_data` to Drive as `midogpp_data`.
+Cell 5 copies them to `/content/midogpp_data` once per session and reads from there: a
+region crop still decodes the whole ~145 MiB TIFF, so a 500-update run touches ~140 GiB,
+which Drive's FUSE mount cannot serve in reasonable time. If the Drive copy is incomplete,
+nothing is staged and cell 10 downloads straight to the local disk instead. If uploading
 7.6 GB is impractical, skip it and let cell 9 download directly on Colab (it verifies every
 file byte-for-byte and resumes partial transfers).
 
@@ -57,7 +61,7 @@ where the same steps are only slower, not different.
 |---|---|---|---|
 | 2 | GPU identity | `Tesla T4, 15360 MiB` | GPU present |
 | 3 | install deps, pick `DEVICE` | `DEVICE = cuda` (or `cpu` + cost warning) | warns on CPU, does not stop |
-| 5 | mount Drive, set `MIDOG_DATA_ROOT` | cwd + free space | `midogcx_project` found |
+| 5 | mount Drive, stage specimens to local disk, set `MIDOG_DATA_ROOT` | project, 55 tiff, free space | `midogcx_project` found |
 | 6 | `pytest tests/ -q` | `117 passed` | **stop if any fail** |
 | 8 | `build_cohort.py --check` | `cohort verified unchanged (…)` | **stop if it errors** |
 | 9 | `download_specimens.py --dry-run` | per-file sizes, "can hold" | advisement only |
