@@ -68,7 +68,7 @@ fails in seconds with a named file instead of after an hour of inference.
 | Cell | What it does | Expected output | Gate |
 |---|---|---|---|
 | 2 | GPU identity | `Tesla T4, 15360 MiB` | GPU present |
-| 3 | install deps, pick `DEVICE` | `DEVICE = cuda` (or `cpu` + cost warning) | warns on CPU, does not stop |
+| 3 | install only missing deps, pick `DEVICE` | `DEVICE = cuda` (or `cpu` + cost warning) | warns on CPU, does not stop |
 | 5 | mount Drive, stage specimens to local disk, set `MIDOG_DATA_ROOT` | project, 55 tiff, free space | `midogcx_project` found |
 | 6 | `pytest tests/ -q` | `117 passed` | **stop if any fail** |
 | 8 | `build_cohort.py --check` | `cohort verified unchanged (…)` | **stop if it errors** |
@@ -141,8 +141,8 @@ quote is `seconds_per_update` from `train_summary.json`.
 
 ## 4. Persist the results
 
-Cell 22 zips the experiment directory back to Drive. For the baseline alone, copy the run
-directory:
+Cell 23 copies the experiment directory's small artefacts (JSON/CSV/pickles) to Drive and
+skips checkpoints. For the baseline alone, copy the run directory:
 
 ```python
 !cp -r /content/drive/MyDrive/midogcx_project/outputs/runs /content/drive/MyDrive/midogcx_results/
@@ -157,6 +157,10 @@ Checkpoints are ~150 MB each; results JSON/CSV are kilobytes.
 | Symptom | Cause | Fix |
 |---|---|---|
 | `CUDA not available` assertion | CPU runtime selected | Runtime → Change runtime type → T4 GPU |
+| `Invalid device string: 'cuda training.batch_size=4 …'` | several `--set key=value` tokens joined into one argv item, so argparse stores the whole string as one value | pass each override as its own argument; the notebook's `train_command()` helper does this |
+| `stale or partial project copy` from cell 5 | the Drive copy differs from this repository (a changed, missing or leftover file) | the message lists the offending files; re-upload the repository, then re-run cell 5. Regenerate the manifest first if the repository itself changed: `python scripts/write_notebook_manifest.py` |
+| `TypeError: HistGradientBoostingRegressor.__init__() got an unexpected keyword argument 'n_splits'` | the Drive copy of `midogcx/` predates the CV-split fix, so the config block's `n_splits` reaches sklearn | prevented by cell 5's manifest check; if it still appears, the cell was skipped — re-upload `midogcx/`, `scripts/`, `configs/` and `tests/`, then re-run from cell 5 |
+| `CUDA out of memory` at batch 4 | T4 memory limit | the notebook retries once at batch 2 automatically; a manual run needs `training.batch_size=2` |
 | `pid ... CUDA out of memory` | batch too large | `training.batch_size=2` |
 | Training crawls (many s/update) | reading TIFFs over Drive | `cp -r` the needed files to `/content/`, point `MIDOG_DATA_ROOT` there |
 | Runtime disconnected mid-training | Colab session limit | everything is on Drive. **Training cannot be resumed** — no optimizer state is saved — so re-run cell 13 from scratch, with `training.checkpoint_every=100` as survival points, not as resume points |
@@ -200,7 +204,12 @@ Checkpoints are ~150 MB each; results JSON/CSV are kilobytes.
 The first Cell 16 attempt failed with
 `HistGradientBoostingRegressor.__init__() got an unexpected keyword argument 'n_splits'`.
 That is fixed in `midogcx/models/error_predictor.py`, `midogcx/acquisition.py` and
-`scripts/run_acquisition_experiment.py`.
+`scripts/run_acquisition_experiment.py`. Cell 5 verifies every file the run depends on against a
+sha256 manifest — `scripts/write_notebook_manifest.py` rebuilds that manifest — so a stale
+Drive copy is named, file by file, before training starts. `scripts/verify_readiness.py` runs
+that manifest's `--check` on every pass, so drift is caught locally instead of in Colab; a code
+change needs `python scripts/write_notebook_manifest.py`, a documentation change does not
+(`docs/` and the top-level `*.md` are not part of the manifest).
 
 1. Copy the fixed `midogcx/`, `scripts/` and `configs/` from the project archive over the
    copy on Drive (no data or checkpoint needs to move).

@@ -1,6 +1,10 @@
 """Train the source-domain RetinaNet baseline.
 
-    python scripts/train_detector.py --set training.updates=500 --set training.device=cuda
+    python scripts/train_detector.py --set training.device=cuda training.updates=500
+
+``--set`` takes several ``key=value`` tokens in **one** flag. Repeating the flag keeps only
+the last group, which silently drops the earlier overrides. The device value is validated
+before any data is read: an unusable device is an error, not a CPU fallback.
 
 Runs from ``data/splits/regions.csv`` + ``outputs/metadata/normalization.json``, so it is
 identical on the local CPU (smoke test / tiny run) and on Colab (real run). The checkpoint
@@ -18,14 +22,47 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 import pandas as pd
+import torch
 
 from midogcx.adaptation.trainer import TrainConfig, train_detector
 from midogcx.config import config_fingerprint, load_config, resolve_data_root, resolve_path
 from midogcx.data.dataset import items_from_regions
 from midogcx.data.metadata import build_index
 from midogcx.data.patches import regions_from_frame
-from midogcx.models.detector import DetectorConfig, build_detector
+from midogcx.models.detector import DetectorConfig, build_detector, require_device
 from midogcx.utils import create_run_dir, get_logger, load_json, save_json
+
+
+def _validate_device(device: str, log) -> bool:
+    """Return True only if ``device`` is usable; log why not otherwise.
+
+    The trainer falls back to CPU when CUDA is unavailable, so two mistakes used to run the
+    whole job on the wrong device with no error: an unparsable value (a joined ``--set``
+    override such as "cuda training.batch_size=4 ..." arriving as one device string) and a
+    CUDA device on a CPU-only torch build. The only symptom was an inexplicably slow run.
+
+    This follows the convention the project already uses for checkpoint reload
+    (:func:`midogcx.models.detector.require_device`) and for
+    ``scripts/run_acquisition_experiment.py``, which rejects ``--device cuda`` on a CPU
+    build, instead of inventing a third policy.
+    """
+    try:
+        torch.device(device)
+    except (RuntimeError, ValueError) as exc:
+        log.error(
+            "invalid training.device %r: %s\n"
+            "  Pass one key=value per --set token, e.g. "
+            "`--set training.device=cuda training.batch_size=4 training.updates=500`.",
+            device,
+            exc,
+        )
+        return False
+    try:
+        require_device(device)
+    except SystemExit as exc:
+        log.error("%s", exc)
+        return False
+    return True
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -38,6 +75,13 @@ def main(argv: list[str] | None = None) -> int:
 
     log = get_logger("train")
     cfg = load_config(args.config, args.set)
+    train_cfg = TrainConfig.from_dict(cfg["training"])
+    train_cfg.seed = int(cfg["project"]["seed"])
+    # Before any data I/O: an unusable device is a configuration error, not something to
+    # discover after the first training update.
+    if not _validate_device(train_cfg.device, log):
+        return 2
+
     data_root = resolve_data_root(cfg)
     index = build_index(resolve_path(cfg, "paths.manifest"), resolve_path(cfg, "paths.annotations"))
     regions = regions_from_frame(pd.read_csv(resolve_path(cfg, "paths.regions")))
@@ -47,8 +91,6 @@ def main(argv: list[str] | None = None) -> int:
         return 2
 
     normalization = load_json(resolve_path(cfg, "paths.normalization"))
-    train_cfg = TrainConfig.from_dict(cfg["training"])
-    train_cfg.seed = int(cfg["project"]["seed"])
 
     run_dir = create_run_dir(resolve_path(cfg, "project.outputs") / "runs", args.tag, train_cfg.seed)
     save_json({"config": cfg, "fingerprint": config_fingerprint(cfg)}, run_dir / "config.json")

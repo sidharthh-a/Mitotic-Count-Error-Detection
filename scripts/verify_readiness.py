@@ -385,6 +385,16 @@ def check_checkpoint(cfg: dict) -> None:
 # --------------------------------------------------------------------------------------
 # 6. Colab notebook
 # --------------------------------------------------------------------------------------
+def _is_manifest_entry(line: str) -> bool:
+    """``<sha256>  <path>``: a line of the notebook's project-copy manifest.
+
+    Such a line names a file the Colab cell hashes; it is not a call to ``build_cohort.py``
+    or ``prepare_regions.py``, so it says nothing about whether those were regenerated.
+    """
+    digest, sep, rest = line.partition("  ")
+    return bool(sep) and bool(rest) and len(digest) == 64 and all(c in "0123456789abcdef" for c in digest)
+
+
 def check_notebook() -> None:
     path = PROJECT_ROOT / "notebooks" / "colab_pipeline.ipynb"
     if not path.exists():
@@ -407,6 +417,8 @@ def check_notebook() -> None:
     for src in code_cells:
         for line in src.splitlines():
             stripped = line.strip().lstrip("!").strip()
+            if _is_manifest_entry(stripped):
+                continue
             for script in ("build_cohort.py", "prepare_regions.py"):
                 if script in stripped:
                     frozen_calls.append((script, "--check" in stripped, stripped))
@@ -442,6 +454,20 @@ def check_notebook() -> None:
         "notebook: code cells parse",
         not unparsable,
         "all Python statements compile" if not unparsable else "; ".join(unparsable),
+    )
+    # Cell 5 refuses to run on a mounted copy that differs from this repository, so a manifest
+    # left behind by a code change has to fail here, not at the start of a Colab run.
+    proc = subprocess.run(
+        [sys.executable, "scripts/write_notebook_manifest.py", "--check"],
+        cwd=PROJECT_ROOT,
+        capture_output=True,
+        text=True,
+    )
+    tail = (proc.stdout + proc.stderr).strip().splitlines()
+    record(
+        "notebook: project-copy manifest current",
+        proc.returncode == 0,
+        " | ".join(tail[-2:]) if tail else f"exit {proc.returncode}",
     )
 
 

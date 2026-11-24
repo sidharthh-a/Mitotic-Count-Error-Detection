@@ -130,7 +130,7 @@ streamlit run frontend/app.py
 Any setting can be overridden without editing files:
 
 ```bash
-python scripts/train_detector.py --set training.updates=500 --set training.batch_size=4
+python scripts/train_detector.py --set training.updates=500 training.batch_size=4
 python scripts/run_acquisition_experiment.py --checkpoint ... --set acquisition.budget_fraction=0.1
 ```
 
