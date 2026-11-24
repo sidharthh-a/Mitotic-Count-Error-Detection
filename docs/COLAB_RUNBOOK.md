@@ -48,7 +48,8 @@ Confirm you have ≥ 10 GB free before starting.
 
 ## 2. Run the cells in order
 
-The notebook refuses to train without CUDA, and refuses to touch the frozen artefacts.
+The notebook never demands a GPU (it selects CUDA when present and falls back to CPU with a
+printed cost warning), and refuses to touch the frozen artefacts.
 
 Cell numbers below are the notebook's own positions (1-based, markdown headers included).
 
@@ -56,6 +57,13 @@ Cell numbers below are the notebook's own positions (1-based, markdown headers i
 back to CPU with a printed cost warning, reuses an existing baseline checkpoint instead of
 retraining it, and reuses a finished baseline gate. Expect ~1.5 h on a T4 and ~7–8 h on CPU,
 where the same steps are only slower, not different.
+
+Every script is launched through one helper (`run_step`) that streams the script's stdout but
+captures its stderr: if a step fails, its own traceback is printed after a
+`!!! step failed (exit N)` line. That block — not the surrounding `CalledProcessError` — is
+the error to read. Cell 15 also loads the chosen checkpoint before the gate and cell 17
+prints the free space results are written to, so a torn checkpoint or a full results disk
+fails in seconds with a named file instead of after an hour of inference.
 
 | Cell | What it does | Expected output | Gate |
 |---|---|---|---|
@@ -70,8 +78,9 @@ where the same steps are only slower, not different.
 | 14 | train the source baseline | loss trace every 20 updates | see §3 |
 | 15 | select the newest checkpoint | prints `using: outputs/runs/…/checkpoint.pth` | checkpoint exists |
 
-Cells 17–19 (acquisition experiment) are **not** part of this run. Do not run them until the
-baseline gate in cell 17 is reviewed.
+Cell 17 is the baseline gate: it evaluates the unadapted control and prints the P/R/F1 /
+TP/FP/FN/MAE table. Review that table before cell 18 spends time on the five adaptation
+branches — an unadapted control that detects nothing makes the comparison uninterpretable.
 
 If `--check` fails, **do not** re-run `prepare_regions.py` without `--check` on Colab. The
 frozen grid on Drive would then differ from the one every budget and selection was computed
