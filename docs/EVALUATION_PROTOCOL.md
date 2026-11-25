@@ -58,15 +58,24 @@ constant across scanners. It is applied as published; the discrepancy with the 3
 
 ## Threshold selection
 
-* Search range `0.50 … 0.99`, step `0.01` — the official range.
-* Criterion: pooled F1 on the **source calibration** specimens.
+* Search range `0.05 … 0.99`, step `0.01` (`evaluation.threshold_search` in
+  `configs/base.yaml`). The official range starts at `0.50`; this project starts below it
+  because a fine-tuned head can concentrate its scores far below 0.5 — in the first pilot
+  only 0.6 % of raw detections reached 0.5, so a 0.50 floor left the optimum sitting on the
+  grid's left edge and made the "selected" threshold an artefact of the range rather than a
+  measured optimum.
+* Criterion: pooled F1 on the **source calibration** specimens. Assessment specimens never
+  influence the threshold, the strategy or any hyperparameter.
 * The selected threshold is then applied unchanged to every method and to target assessment.
   Recalibrating per method on target data would leak.
 * The full sweep is saved (`threshold.json`) with its search range and criterion, so a
   reader can see it was not an official calibration and not a per-method optimum.
+* The calibration specimens' raw predictions are saved too (`calibration_predictions.json`),
+  so the sweep can be recomputed offline at any range without re-running inference, and the
+  provenance of the chosen threshold can be checked directly.
 
-Earlier exploratory sweeps in the pilot used 0.10–0.50; those are not comparable and are not
-reproduced here.
+The wider range does not make results comparable with earlier exploratory sweeps; it only
+removes the clipping at 0.50.
 
 ## Metric definitions
 
@@ -115,6 +124,8 @@ favours A. Seeds are not treated as extra samples.
 metrics/<method>.json     pooled, macro, counting, CIs, per-specimen rows,
                           threshold, NMS radius, match radius
 metrics/<method>_predictions.json   raw points + scores (threshold-reappliable)
+calibration_predictions.json        raw points + scores on the source_calib specimens
+threshold.json                      chosen threshold, search range, criterion, full sweep
 selections/<strategy>.json          full ranking, admitted regions, budget used
 predictor_report.json               OOF and in-sample quality for both learned rules
 paired_comparisons.json             per-method difference vs source_only

@@ -140,6 +140,10 @@ def main(argv: list[str] | None = None) -> int:
     )
     threshold = float(threshold_info["best_threshold"])
     save_json(threshold_info, run_dir / "threshold.json")
+    # Calibration slides are never scored again, so their raw predictions are saved here:
+    # the sweep in threshold.json can then be recomputed at any range without a GPU, and a
+    # reader can confirm the selected threshold came from source_calib and not from target.
+    save_predictions(list(calib_preds.values()), run_dir / "calibration_predictions.json")
     log.info("locked threshold %.2f (pooled F1 on calibration specimens)", threshold)
 
     # ---- 2. Error-predictor supervision from an out-of-sample source cohort ------------

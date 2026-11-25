@@ -42,8 +42,12 @@ inference:
 
 evaluation:
   match_radius_um: 7.5
+  # Floor lowered from the official 0.50: the pilot's trained heads concentrate scores
+  # below 0.5 (0.6% of detections >= 0.5), so a 0.50 floor pins the choice to the grid's
+  # left edge and hides the recall the detector actually has. The range is still recorded
+  # in threshold.json, and the chosen threshold is still fitted on source_calib only.
   threshold_search:
-    start: 0.5
+    start: 0.05
     stop: 0.99
     step: 0.01
   bootstrap_samples: 1000

@@ -138,8 +138,11 @@ def select_threshold(
     """Pick the pooled-F1 maximising threshold on calibration specimens.
 
     Mirrors the official evaluator, which searches ``0.50 .. 0.99`` and reports the
-    threshold that maximises aggregate F1 on the validation set. The search range is
-    recorded in the output so it is never confused with an official sweep.
+    threshold that maximises aggregate F1 on the validation set. The range is a caller
+    argument here: the project's config starts below the official floor (0.05), because a
+    trained head can concentrate scores under 0.50 and a 0.50 floor would then pin the
+    choice to the grid's edge. The range actually searched is recorded in the output so it
+    is never confused with an official sweep.
 
     Tie-break: pooled F1 is discrete, so exact ties are common. The **higher** threshold
     wins, i.e. the tie is settled towards fewer and more confident detections. The
